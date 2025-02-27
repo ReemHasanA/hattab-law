@@ -1,0 +1,337 @@
+ /* General Styling */
+ body {
+    font-family: 'EB Garamond';
+    background-color: #121212;
+    color: #fff;
+}
+
+.form-container {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 88px auto;
+}
+
+.form-container h1 {
+    color: #fff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-left: 9px;
+    display: block;
+    margin-bottom: 10px;
+    color: #b89b5e;
+}
+
+.form-control {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #121212;
+    color: #fff;
+}
+
+.btn-success {
+    background-color: #b89b5e;
+    color: #121212;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.btn-success:hover {
+    background-color: #a4844c;
+    color: #fff;
+}
+
+.success-message {
+    color: green;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+
+/* Sidebar Styling */
+.sidebar {
+width: 250px;
+height: 100vh;
+background-color: #1a1a1a;
+position: fixed;
+top: 0;
+left: 0;
+padding-top: 20px;
+box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+overflow-y: auto;
+transition: all 0.3s ease;
+}
+
+.sidebar img#LawLogo {
+width: 120px;
+height: auto;
+margin-bottom: 20px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+transition: transform 0.3s ease;
+}
+
+.sidebar img#LawLogo:hover {
+transform: scale(1.1);
+}
+
+.sidebar h2 {
+text-align: center;
+color: #b89b5e;
+font-size: 24px;
+margin-bottom: 30px;
+font-weight: bold;
+}
+
+.sidebar ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+.sidebar ul li {
+padding: 15px;
+text-align: center;
+border-bottom: 1px solid #333;
+transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:last-child {
+border-bottom: none;
+}
+
+.sidebar ul li:hover {
+background-color: #333;
+}
+
+.sidebar ul li a {
+text-decoration: none;
+color: #fff;
+font-size: 16px;
+display: block;
+}
+
+.sidebar ul li a:hover {
+color: #b89b5e;
+}
+
+/* Active Link Styling */
+.sidebar ul li a.active {
+color: #b89b5e;
+font-weight: bold;
+position: relative;
+}
+
+.sidebar ul li a.active:before {
+content: '';
+position: absolute;
+left: 0;
+top: 50%;
+transform: translateY(-50%);
+width: 5px;
+height: 80%;
+background-color: #b89b5e;
+border-radius: 5px;
+}
+
+
+.team-table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 30px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-table thead {
+background-color: #b89b5e;
+color: #121212;
+}
+
+.team-table th, .team-table td {
+padding: 15px;
+text-align: center;
+border: 1px solid #333;
+}
+
+.team-table tbody tr {
+background-color: #1a1a1a;
+transition: background-color 0.3s ease;
+}
+
+.team-table tbody tr:hover {
+background-color: #333;
+}
+
+.team-photo {
+width: 80px;
+height: 80px;
+object-fit: cover;
+border-radius: 50%;
+}
+
+.btn-edit, .btn-delete {
+padding: 5px 10px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.btn-edit {
+background-color: #b89b5e;
+color: #121212;
+text-decoration: none;
+}
+
+.btn-edit:hover {
+background-color: #a4844c;
+color: #fff;
+}
+
+.btn-delete {
+background-color: #e74c3c;
+color: #fff;
+}
+
+.btn-delete:hover {
+background-color: #c0392b;
+}
+
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+.sidebar {
+width: 200px;
+}
+
+.sidebar ul li a {
+font-size: 16px;
+}
+
+.sidebar img#LawLogo {
+width: 100px;
+}
+}
+
+@media (max-width: 576px) {
+.sidebar {
+width: 100%;
+height: auto;
+position: relative;
+box-shadow: none;
+}
+
+.sidebar ul {
+display: flex;
+justify-content: space-around;
+padding: 10px;
+}
+
+.sidebar ul li {
+padding: 10px;
+border-bottom: none;
+}
+
+.sidebar ul li a {
+font-size: 14px;
+}
+}
+
+
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #fff;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    border: 1px solid #444;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #333;
+    color: #b89b5e;
+}
+
+.table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+.table td .full-text {
+    display: none;
+}
+
+.table td:hover .full-text {
+    display: block;
+    white-space: normal;
+}
+
+.table td:hover .short-text {
+    display: none;
+}
+
+.table img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+    color: #fff;
+}

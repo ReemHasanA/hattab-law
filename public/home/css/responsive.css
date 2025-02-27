@@ -1,0 +1,139 @@
+/* Adjust font sizes for better readability on mobile */
+@media (max-width: 768px) {
+    h3, .section_title, .service-title {
+        font-size: 29px;
+    }
+    p, .about_text {
+        font-size: 1em;
+    }
+
+    /* Center align text */
+    .text-center {
+        text-align: center;
+    }
+
+    /* Adjust padding and margins */
+    .container, .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Mobile Menu Adjustments */
+    .mobile_menu {
+        display: block;
+    }
+    .main-menu {
+        display: none;
+    }
+}
+
+
+/* Footer Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-dark {
+        padding: 20px;
+        text-align: center;
+    }
+    .footer-dark .item {
+        margin-bottom: 20px;
+    }
+    .footer-dark .item h3 {
+        font-size: 1.2em;
+    }
+    .footer-dark .item p, .footer-dark .item a {
+        font-size: 0.9em;
+    }
+    .footer-dark .social-media {
+        margin-top: 15px;
+    }
+    .about_area .single_about_info p {
+        font-size: 15px;
+    }
+    #LawLogo{
+        width: 88px;
+        margin-left: 10px;
+    }
+    .practice_area .single_practice .practice_hover p {
+        text-align: justify;
+        font-size: 15px;
+        color: #C7C7C7;
+        margin-bottom: 21px;
+    }
+    .container .row .col-md-4 p{
+        font-size: 14px;
+        width: 78%;
+        text-align: justify;
+        margin-left: 65px;
+    }
+    .value-box ul li{
+        font-size: 15px;
+        margin-left: 74px;
+    }
+    .detail-description p{
+        font-size: 15px;
+    }
+    .team-image img{
+        width: 76%;
+    }
+    .team-info p.bio {
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1.6;
+        color: #565656;
+        text-align: justify;
+    }
+    .map-part .map-container{
+        width: 94%;
+        height: 300px;
+        margin-left: 81px;
+    }
+    .contact_us_6  p{
+        font-size: 14px;
+        margin-left: 54px;
+        text-align: justify;
+        margin-bottom: 27px;
+        margin-top: 19px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-dark .contactInfo p,
+    .footer-dark .practiceArea ul {
+        text-align: justify;
+    }
+    .footer-dark .social-media {
+        text-align: center;
+    }
+    h3, .section_title, .service-title {
+        font-size: 33px;
+    }
+    .slider_area_inner .single_slider .slider_text h3{
+        margin-top: -162px;
+        font-size: 16px;
+        line-height: 35px;
+        font-weight: 900;
+    }
+    .about_area .single_about_info p {
+        font-size: 19px;
+    }
+    .slider_area_inner.slider_area_inner2{
+        height: 352px;
+    }
+    .about-us h2{
+        font-size: 15px;
+    }
+    .about-us p{
+        width: 49%;
+        font-size: 13px;
+    }
+    .container .row .col-md-4 p{
+        font-size: 16px;
+        width: 78%;
+        text-align: justify;
+        margin-left: 65px;
+    }
+    .value-box ul li{
+        font-size: 15px;
+        margin-left: 74px;
+    }
+}

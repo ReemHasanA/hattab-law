@@ -1,0 +1,94 @@
+.practice-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.practice-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+    height: 250px;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.image-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.3s ease !important;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-footer a {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-footer a:hover {
+    background-color: #b89b5e !important;
+    color: #fff !important;
+}
+.description {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+.card-footer .btn {
+    color: #ffffff !important;
+    font-weight: 600;
+    background-color: #b89b5e !important;
+    width: 141px;
+    font-family: 'EB Garamond';
+}
+
+.card-footer .btn:hover {
+    background-color:rgb(255, 255, 255) !important;
+    color: black !important;
+}
+
+.custom-dropdown-toggle {
+    color: #b89b5e !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.custom-dropdown-toggle:hover {
+    color: #d1b26f !important;
+}
+
+.custom-dropdown-menu {
+    background-color: #1a1a1a !important;
+    border: 1px solid #333 !important;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+.custom-dropdown-item {
+    color: #b89b5e !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+.custom-dropdown-item:hover {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+.custom-dropdown-item.active {
+    background-color: #444 !important;
+    color: #fff !important;
+}

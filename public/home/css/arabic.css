@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Majalla';
+    src: url('/fonts/SakkalMajalla.woff2') format('woff2'),
+         url('/fonts/SakkalMajalla.woff') format('woff'),
+         url('/fonts/SakkalMajalla.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body[dir='rtl'] {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Majalla', sans-serif !important;
+}
+.header-area .main-header-area .main-menu ul li a{
+    font-family: 'Majalla', sans-serif !important;
+}
+.slider_area_inner .single_slider .slider_text h3{
+    
+    font-family: 'Majalla', sans-serif !important;
+}
+.boxed-btn4 {
+    font-family: 'Majalla', sans-serif !important;
+}
+
+.slider_bg_1 {
+    transform: scaleX(-1);
+    background-position: right;
+}
+.slider_text{
+    transform: scaleX(-1);
+}
+.slider_area .slider_area_inner .container{
+    transform: scaleX(-1);
+    background-position: right;
+}
+
+.row .col-xl-7 .single_slider{
+    transform: scaleX(-1);
+    background-position: right;
+}
+h1, h2, h3, h4, h5{
+    font-family: 'Majalla', sans-serif !important;
+}
+
+p{
+    font-family: 'Majalla', sans-serif !important;
+}
+.about_area .single_about_info p{
+    font-size: 33px;
+}
+.footer-dark{
+    direction: ltr;
+}
+
+.value-box ul li{
+    display: flex;
+    margin-left: 34px;
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 0;
+    margin-bottom: 18px;
+    color: #a79d9d;
+}
+
+.about-us h2{
+    font-size: 36px;
+    font-weight: 700;
+    color: #b89b5e;
+    text-transform: uppercase;
+    border-bottom: 3px solid #b89b5e;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-left: 507px;
+}
+.about-us p{
+    font-size: 20px;
+}
+.detail-description{
+    text-align: right;
+    
+}
+
+.detail-description p{
+    font-size: 18px;
+    color: #d3c2c2;
+}
+
+.team-info p.bio {
+    font-size: 17px;
+}
+.team-info h3.member-name{
+    text-align: right;
+}
+.team-info p.position{
+    text-align: right;
+}
+.contact_us_6 .responsive-container-block.container{
+       margin-right: -147px;
+       align-items: center;
+       gap: 45px;
+}
+
+.contact_us_6 *{
+    text-align: right;
+}
+.contact_us_6 .text-blk.input-title{
+    text-align: right;
+}
+.contact_us_6 .submit-btn{
+    text-align: center;
+    width: 77%;
+    margin-left: 58px;
+}
