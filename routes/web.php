@@ -22,7 +22,7 @@ Route::get('/practice', [PracticeController::class, 'index']);
 
 // Authentication Routes (Login)
 Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.board');
 });
 
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');

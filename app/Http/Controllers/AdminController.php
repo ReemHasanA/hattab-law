@@ -12,6 +12,6 @@ class AdminController extends Controller
             return redirect()->route('login'); // Redirect if not authenticated
         }
 
-        return view('admin.dashboard'); // Load admin dashboard
+        return view('admin.board'); // Load admin dashboard
     }
 }

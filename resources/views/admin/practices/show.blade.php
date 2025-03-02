@@ -1,13 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>⚖️ Hattab Law Firm</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSS here -->
- <link rel="stylesheet" href="{{asset('home/css/bootstrap.min.css')}}">
+     <!-- CSS here -->
+     <link rel="stylesheet" href="{{asset('home/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('home/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('home/css/magnific-popup.css')}}">
     <link rel="stylesheet" href="{{asset('home/css/font-awesome.min.css')}}">
@@ -22,25 +24,25 @@
 
     <link rel="stylesheet" href="{{asset('home/css/show.css')}}">
 
-    <!-- FontAwesome 6 Free -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet" async>
-
     
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- FontAwesome 6 Free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" >
+
+
+
     @if (app()->getLocale() == 'ar')
     <link rel="stylesheet" href="{{ asset('home/css/arabic.css') }}">
     @endif
 
 
-    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script> -->
-    
-   
-
     <!-- Bootstrap JS (Popper.js included) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
     
@@ -52,8 +54,12 @@
 <body>
 
 
-<!-- header-start -->
-<header>
+ <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+   <!-- header-start -->
+   <header>
     <div class="header-area">
         <div id="sticky-header" class="main-header-area">
             <div class="container-fluid p-0">
@@ -61,7 +67,7 @@
                     <div class="col-xl-2 col-lg-2">
                         <div class="logo-img">
                             <a href="{{ url('/') }}">
-                                <img id="LawLogo" src="{{ asset('img/homePage/lawLogo.png') }}" alt="Law Logo" loading="lazy">
+                                <img id="LawLogo" src="{{ asset('img/homePage/lawLogo.png') }}" alt="">
                             </a>
                         </div>
                     </div>
@@ -72,13 +78,11 @@
                                         <li><a class="active" href="{{url('/')}}">{{__("Home")}}</a></li>
                                         <li><a href="{{url('about')}}">{{__("About")}}</a></li>
 
-
-                                        
-                                <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle custom-dropdown-toggle" href="{{url('practice')}}" id="practiceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                         {{__("Practice Areas")}}
-                                            </a>
-                                        <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="practiceDropdown">
+                                        <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle custom-dropdown-toggle" href="{{url('practice')}}" id="practiceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{ __("Practice Areas") }}
+                                    </a>
+                                    <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="practiceDropdown">
                                         @foreach ($practices as $practice)
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-item" href="{{ route('practices.show', $practice->id) }}">
@@ -86,11 +90,10 @@
                                                 </a>
                                             </li>
                                         @endforeach
-
-
-
                                     </ul>
                                 </li>
+
+
 
 
                                         <li><a href="{{url('team')}}">{{__("Our Team")}}</a></li>
@@ -99,7 +102,6 @@
                                 </nav>
                             </div>
                         </div>
-            
 
                     <div class="wrapper">
                     <div class="lang-selector">
@@ -112,8 +114,6 @@
                 </div>
 
 
-
-
                     <div class="col-12">
                         <div class="mobile_menu d-block d-lg-none"></div>
                     </div>
@@ -123,7 +123,6 @@
     </div>
 </header>
     <!-- header-end -->
-
    
     
 
@@ -141,7 +140,7 @@
 
     <!-- Display the Description -->
     <div class="detail-description">
-        <p>{{ app()->getLocale() == 'ar' ? $practice1->description_ar : $practice1->description_en }}</p>
+    {!! app()->getLocale() == 'ar' ? $practice1->description_ar : $practice1->description_en !!}
     </div>
 </div>
 
@@ -203,6 +202,39 @@
     <!-- footer_end -->
 
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- JS here -->
+    <script src="{{asset('home/js/vendor/modernizr-3.5.0.min.js')}}"></script>
+    <script src="{{asset('home/js/vendor/jquery-1.12.4.min.js')}}"></script>
+    <script src="{{asset('home/js/popper.min.js')}}"></script>
+    <script src="{{asset('home/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('home/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('home/js/isotope.pkgd.min.js')}}"></script>
+    <script src="{{asset('home/js/ajax-form.js')}}"></script>
+    <script src="{{asset('home/js/waypoints.min.js')}}"></script>
+    <script src="{{asset('home/js/jquery.counterup.min.js')}}"></script>
+    <script src="{{asset('home/js/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{asset('home/js/scrollIt.js')}}"></script>
+    <script src="{{asset('home/js/jquery.scrollUp.min.js')}}"></script>
+    <script src="{{asset('home/js/wow.min.js')}}"></script>
+    <script src="{{asset('home/js/nice-select.min.js')}}"></script>
+    <script src="{{asset('home/js/gijgo.min.js')}}"></script>
+    <script src="{{asset('home/js/jquery.slicknav.min.js')}}"></script>
+    <script src="{{asset('home/js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{asset('home/js/plugins.js')}}"></script>
+
+    <!--contact js-->
+    <script src="{{asset('home/js/contact.js')}}"></script>
+    <script src="{{asset('home/js/jquery.ajaxchimp.min.js')}}"></script>
+    <script src="{{asset('home/js/jquery.form.js')}}"></script>
+    <script src="{{asset('home/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('home/js/mail-script.js')}}"></script>
+
+    <script src="{{asset('home/js/main.js')}}"></script>
 
 
 

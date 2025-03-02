@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Lawyer</title>
+    <title>⚖️ Hattab Law Firm</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet" async>
     
 
-    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <!-- FontAwesome 6 Free -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" >
 
@@ -126,15 +126,11 @@
      <!-- About Us Section -->
      <section class="about-us py-5">
         <div class="container">
-            <div class="row" style="
-                display: flex;
-                /* justify-content: center; */
-                width: 204%;
-            ">
+            <div class="row">
                 <!-- <div class="col-lg-6">
                     <img src="img/homePage/law9.jpg" alt="Law Firm" class="img-fluid rounded">
                 </div> -->
-                <div class="col-lg-6">
+                <div class="col-lg-6" style="width: 204%; display:contents">
                     <h2 class="text-primary1">{{__("Al-Hattab Attorneys & Legal Consultants")}}</h2>
                     <p>{{__("Al Hattab Law Firm is a legal organization with deep family roots spanning three generations of dedication and excellence in the field of law. Founded by Bashir Al Hattab, one of the leading lawyers in Jordan and Palestine, who held bar number 20, he established a distinguished professional approach that has allowed his family's legal legacy to endure for generations, inspiring them to continue their legal careers.")}}</p>
                     <p>{{__("Over the decades, members of the Al Hattab family have adhered to the founder's approach, making the family name synonymous with leadership in the field of law in Jordan. The firm has evolved into a specialized entity that blends inherited expertise with a modern vision, becoming one of the most prominent law firms in Jordan, offering a wide range of legal services.")}}</p>

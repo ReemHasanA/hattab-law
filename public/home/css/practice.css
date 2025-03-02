@@ -81,7 +81,12 @@
     padding: 10px 20px !important;
     border-radius: 5px !important;
     transition: background-color 0.3s ease, color 0.3s ease !important;
+    min-width: 200px !important; /* Ensures a minimum width */
+    max-width: 100% !important; /* Prevents excessive shrinkage */
+    white-space: nowrap !important; /* Prevents text wrapping */
+    display: block !important; /* Ensures it takes full width */
 }
+
 
 .custom-dropdown-item:hover {
     background-color: #333 !important;

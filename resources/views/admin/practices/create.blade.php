@@ -9,9 +9,58 @@
 
     <link rel="stylesheet" href="{{asset('home/css/add.css')}}">
 
+    <script src="https://cdn.tiny.cloud/1/nh6qndk6j4h9f2qa39m6q7qn35i2ka1f5raxxcoojp84fuem/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    tinymce.init({
+        selector: '#description_en, #description_ar',
+        plugins: 'lists link paste',
+        toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright | bullist numlist | removeformat',
+        paste_auto_cleanup_on_paste: true,
+        paste_as_text: true,
+        height: 200,
+        cleanup: true,
+        forced_root_block: 'p', 
+        force_p_newlines: true,
+        remove_linebreaks: true,
+        entity_encoding: "raw",
+        valid_elements: "p,ul,ol,li,strong,em,a[href],br",
+        valid_children: "+body[style],+p[strong|em|a|#text],+ul[li],+ol[li]",
+        setup: function (editor) {
+            editor.on('init', function () {
+                if (editor.id === 'description_ar') {
+                    editor.getBody().setAttribute('dir', 'rtl');
+                    editor.getBody().style.textAlign = 'right';
+                }
+            });
+
+            // Auto-clean list formatting
+            editor.on('GetContent', function (e) {
+                e.content = e.content.replace(/<\/ul>\s*<ul>/g, ''); // Merge consecutive <ul> lists
+                e.content = e.content.replace(/<\/li>\s*<li>/g, '</li><li>'); // Fix <li> spacing
+            });
+        }
+    });
+});
+
+
+</script>
+
+
+
 
 </head>
 <body>
+
+@if (app()->environment('local'))
+    <!-- Load TinyMCE locally for localhost (127.0.0.1:8000) -->
+    <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
+@else
+    <!-- Load TinyMCE Cloud for live server -->
+    <script src="https://cdn.tiny.cloud/1/YOUR_API_KEY/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+@endif
+
    <!-- Sidebar -->
    <div class="sidebar">
        <img id="LawLogo" src="{{ asset('img/homePage/lawLogo.png') }}" alt="">

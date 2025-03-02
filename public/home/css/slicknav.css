@@ -49,7 +49,7 @@
 .slicknav_nav {
   clear: both; }
   .slicknav_nav ul {
-    display: block; }
+    display: contents; }
   .slicknav_nav li {
     display: block; }
   .slicknav_nav .slicknav_arrow {
