@@ -15,7 +15,7 @@
 <body>
     <!-- Sidebar -->
    <div class="sidebar">
-       <img id="LawLogo" src="{{ asset('img/homePage/lawLogo.png') }}" alt="">
+       <img id="LawLogo" src="{{ asset('img/homePage/logo.png') }}" alt="">
        <h2>Al Hattab Law Firm</h2>
        <ul>
        <li><a href="{{ route('admin.board') }}">Dashboard</a></li>

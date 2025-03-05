@@ -156,7 +156,7 @@
 
     <div class="login-container">
         <!-- Logo -->
-        <img src="{{ asset('img/homePage/lawLogo.png') }}" alt="Law Firm Logo" class="logo">
+        <img src="{{ asset('img/homePage/logo.png') }}" alt="Law Firm Logo" class="logo">
 
         <h3>Admin Login</h3>
 

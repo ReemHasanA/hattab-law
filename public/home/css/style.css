@@ -344,6 +344,25 @@ h3 {
   }
 }
 
+.about-btn{
+  border-radius: 100px;
+  color: #b89b5e;
+  background: transparent;
+  padding: 7px 33px;
+  font-weight: 600;
+  border: 1px solid #b89b5e;
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+  top: 25px;
+}
+
+.about-btn:hover{
+  background-color: #000;
+  color: #ddd;
+}
+
+
 .boxed-btn4 {
   color: #b89b5e;
   width: 200px;
@@ -403,7 +422,7 @@ h3 {
   line-height: 48px;
   font-weight: 700;
   font-family: 'EB Garamond';
-  color: #c78c15;
+  color: #b89b5e;
 }
 
 @media (max-width: 767px) {
@@ -625,7 +644,7 @@ h3 {
   top: 0;
   background: transparent;
   z-index: 999;
-  background: #000;
+  background: #2e2e2e;
 }
 
 .header-area .main-header-area {
@@ -833,7 +852,7 @@ h3 {
   transition: transform 500ms ease, background 500ms ease;
   -webkit-transition: transform 500ms ease, background 500ms ease;
   box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
-  background: #000;
+  background: #2e2e2e;
 }
 
 @media (max-width: 767px) {
@@ -1162,7 +1181,7 @@ h3 {
 @media (min-width: 1200px) and (max-width: 1500px) {
   /* line 43, C:/Users/SPN Graphics/Desktop/CL September/211 Lawyer/HTML/scss/_practice.scss */
   .practice_area .single_practice .practice_hover h3 {
-    font-size: 19px;
+    font-size: 16px;
     color: #fff;
     margin-top: 13px;
     margin-bottom: 24px;
@@ -1181,7 +1200,8 @@ h3 {
   .practice_area .single_practice .practice_hover p {
     font-size: 14px;
     margin-bottom: 10px;
-    text-align: center;
+    text-align: justify;
+    padding: 19px;
   }
 }
 
@@ -1362,7 +1382,7 @@ h3 {
 
 /* Highlighted Span */
 .section_title span {
-  color: #c78c15;
+  color: #b89b5e;
 }
 
 @media (max-width: 767px) {
@@ -5173,12 +5193,15 @@ h6 {
 /* General Footer Styling */
 .footer-dark {
   padding: 50px 15px;
-  background-color: #000;
+  background-color: #2e2e2e;
   color: #f0f9ff;
+}
+#footer-i{
+  margin-right: 4px;
 }
 
 .footer-dark h3 {
-  color: #c78c15;
+  color: #b89b5e;
   font-family: 'EB Garamond';
   font-size: 22px;
   margin-bottom: 20px;
@@ -5191,7 +5214,7 @@ h6 {
 }
 
 .footer-dark .item a:hover {
-  color: #c78c15;
+  color: #b89b5e;
 }
 
 .footer-dark .practiceArea ul {
@@ -5253,13 +5276,13 @@ h6 {
   text-align: center;
 }
 
-.service-title {
+/* .service-title {
   font-size: 40px;
   font-weight: 700;
   font-family: 'EB Garamond', serif;
-  color: #c78c15;
+  color: #b89b5e;
   margin-bottom: 50px;
-}
+} */
 
 /* Grid Layout */
 .services-grid {
@@ -5364,11 +5387,11 @@ h6 {
 
 /* Values Section */
 .values-section {
-  margin-top: 58px;
   background: #000;
   padding: 60px 0;
   color: #fff;
   text-align: center;
+  margin-bottom: 90px;
 }
 
 /* Individual Value Box */
@@ -5395,11 +5418,13 @@ h6 {
 
 /* Text */
 .value-box p {
-  width: 234px;
-  word-spacing: -2px;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #a79d9d;
+  display: flex;
+    width: 246px;
+    word-spacing: -2px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #a79d9d;
+    text-align: justify;
 
 }
 
@@ -5463,17 +5488,16 @@ h6 {
 }
 
 .lang-btn {
-  background-color: #c78c15;
-  color: white;
-  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #b89b5e;
+  padding: 8px 12px;
   font-size: 16px;
-  border: none;
-  border-radius: 5px;
+  color: #b89b5e;
   cursor: pointer;
-  width: 140px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  min-width: 123px;
 }
 
 .lang-btn i {
@@ -5593,3 +5617,86 @@ h6 {
       margin-right: auto;
   }
   
+
+/* Our Clients Section */
+.clients-section {
+  padding: 61px 8px;
+    background: #fff;
+    text-align: center;
+}
+
+/* Logo Carousel Container */
+.clients-carousel {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.clients-carousel::after {
+  content: "";
+  display: block;
+  width: 97%;
+  height: 2px;
+  background-color: #b89c5d; 
+  margin: 20px auto;
+}
+
+/* Individual Logo */
+.client-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Logo Images */
+.client-logo img {
+  max-width: 193px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3sease-in-out, opacity 0.3s;
+  opacity: 0.85;
+}
+
+/* Hover Effect */
+.client-logo img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.section_title1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  height: 107px;
+}
+.clients-title{
+  font-size: 35px;
+  color: #b89b5e;
+  font-weight: 600;
+  font-family: 'EB Garamond';
+}
+.title-line {
+  width: 330px; /* Adjust width as needed */
+  height: 2px;
+  background-color: #b89c5d; /* Gold color */
+}
+
+.values-section .container{
+  width: 900px;
+}
+
+
+
+
+
+
+
+
+
+
+.map-container{
+  height: 444px;
+}

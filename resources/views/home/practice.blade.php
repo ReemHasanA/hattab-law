@@ -65,7 +65,7 @@
                     <div class="col-xl-2 col-lg-2">
                         <div class="logo-img">
                             <a href="{{ url('/') }}">
-                                <img id="LawLogo" src="{{ asset('img/homePage/lawLogo.png') }}" alt="">
+                                <img id="LawLogo" src="{{ asset('img/homePage/logo.png') }}" alt="">
                             </a>
                         </div>
                     </div>
@@ -113,15 +113,19 @@
                          </div>
                     </div> -->
 
-                    <div class="wrapper">
                     <div class="lang-selector">
-                        <button class="lang-btn">{{__("Language")}} <i class="fas fa-angle-down"></i></button>
+                        <button class="lang-btn">
+                            {{ app()->getLocale() === 'en' ? 'EN' : 'AR' }}
+                            <i class="fas fa-angle-down"></i>
+                        </button>
                         <ul class="lang-menu">
-                            <li><a href="{{ url('lang/en') }}">{{__("English")}}</a></li>
-                            <li><a href="{{ url('lang/ar') }}">{{__("Arabic")}}</a></li>
+                            @if(app()->getLocale() === 'en')
+                                <li><a href="{{ url('lang/ar') }}">AR</a></li>
+                            @else
+                                <li><a href="{{ url('lang/en') }}">EN</a></li>
+                            @endif
                         </ul>
                     </div>
-                </div>
 
 
                     <div class="col-12">
@@ -177,10 +181,11 @@
                 <div class="col-12 col-md-4 item">
                     <h3>{{__("Address")}}</h3>
                     <div class="contactInfo">
-                        <p>
-                            <i style="margin-right: 10px;" class="fas fa-map-marker-alt"></i> {{__("Jordan - Amman - Hashim Khair Street - Building 79")}}</p>
-                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+962795534658">{{__("00962-79-5534658")}}</a></p>
-                        <p><i class="fas fa-envelope"></i> <a href="mailto:hhattablawfirm@gmail.com">{{__("hhattablawfirm@gmail.com")}}</a></p>
+                    <p>
+                        <i id="footer-i" class="fas fa-map-marker-alt"></i> {{__("Jordan - Amman - Hashim Khair Street - Building 79")}}</p>
+                        <p><i id="footer-i" class="fas fa-phone-alt"></i> <a href="tel:+962795534658">{{__("00962-79-5534658")}}</a></p>
+                        <p><i id="footer-i" class="fas fa-envelope"></i> <a href="mailto:hhattablawfirm@gmail.com">{{__("hhattablawfirm@gmail.com")}}</a>
+                    </p>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 item">
@@ -199,7 +204,7 @@
                 </div>
                 <div class="col-12 col-md-4 item text">
                     <h3>{{__("Hattab Law Firm")}}</h3>
-                    <p>{{__("A legal organization with deep family roots spanning three generations of dedication and excellence in the field of law.")}}</p>
+                    <!-- <p>{{__("A legal organization with deep family roots spanning three generations of dedication and excellence in the field of law.")}}</p> -->
                     <p>{{__("Recognized for delivering exceptional legal solutions that empower clients to navigate complex challenges with confidence and success.")}}</p>
                     <div class="social-media">
                         <a href="https://www.linkedin.com/company/al-hattab-attorneys-and-legal-consultants/about/?viewAsMember=true" target="_blank">

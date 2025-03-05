@@ -13,6 +13,7 @@
     <!-- CSS here -->
     <link rel="stylesheet" href="{{asset('home/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('home/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('home/css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{asset('home/css/magnific-popup.css')}}">
     <link rel="stylesheet" href="{{asset('home/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('home/css/themify-icons.css')}}">
@@ -23,6 +24,10 @@
     <link rel="stylesheet" href="{{asset('home/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('home/css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('home/css/practice.css')}}">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
     <!-- FontAwesome 6 Free -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -63,7 +68,7 @@
                     <div class="col-xl-2 col-lg-2">
                         <div class="logo-img">
                             <a href="{{ url('/') }}">
-                                <img  id="LawLogo" src="{{ asset('img/homePage/lawLogo.png') }}"  alt="Law Logo">
+                                <img  id="LawLogo" src="{{ asset('img/homePage/logo.png') }}"  alt="Law Logo">
                             </a>
                         </div>
                     </div>
@@ -100,15 +105,20 @@
                         </div>
             
 
-                    <div class="wrapper">
-                    <div class="lang-selector">
-                        <button class="lang-btn">{{__("Language")}} <i class="fas fa-angle-down"></i></button>
+                        <div class="lang-selector">
+                        <button class="lang-btn">
+                            {{ app()->getLocale() === 'en' ? 'EN' : 'AR' }}
+                            <i class="fas fa-angle-down"></i>
+                        </button>
                         <ul class="lang-menu">
-                            <li><a href="{{ url('lang/en') }}">{{__("English")}}</a></li>
-                            <li><a href="{{ url('lang/ar') }}">{{__("Arabic")}}</a></li>
+                            @if(app()->getLocale() === 'en')
+                                <li><a href="{{ url('lang/ar') }}">AR</a></li>
+                            @else
+                                <li><a href="{{ url('lang/en') }}">EN</a></li>
+                            @endif
                         </ul>
                     </div>
-                </div>
+
 
 
 
@@ -160,8 +170,9 @@
                     <p class="about_text">
                     {{__("Al Hattab Law Firm is a legal organization with deep family roots spanning three generations of dedication and excellence in the field of law. Founded by Bashir Al Hattab, one of the leading lawyers in Jordan and Palestine, who held bar number 20, he established a distinguished professional approach that has allowed his family's legal legacy to endure for generations, inspiring them to continue their legal careers.")}}
                     </p>
-                   
+                    <a href="{{url('about')}}" class="about-btn ">{{__("Read More")}}</a>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -271,7 +282,7 @@
                             <div class="hover_inner">
                             <i class="flaticon-judge"></i>
                                 <h3>{{__("Citizenship, Residency and Investment")}}</h3>
-                                <p>{{__("Al Hattab Law Firm is characterized by its ability to deal with various cases and legal issues related to citizenship, residency")}}</p>
+                                <p>{{__("Al Hattab Law Firm is characterized by its ability to deal with various cases and legal issues related to citizenship, residency and investment")}}</p>
                                 
                             </div>
                         </div>
@@ -315,6 +326,31 @@
         </div>
     </div>
     <!-- practice_area_end -->
+
+
+    <!-- Our Clients Section -->
+<!-- Our Clients Section -->
+<section class="clients-section">
+    <div class="container">
+        <div class="section_title1 text-center">
+        <div class="title-line"></div>
+            <h3 class="clients-title">{{ __("Our Clients") }}</h3>
+        <div class="title-line"></div>
+        </div>
+        <div class="owl-carousel clients-carousel">
+            <div class="client-logo"><img src="{{ asset('img/clients/acdima.png') }}" alt="Client 1"></div>
+            <div class="client-logo"><img src="{{ asset('img/clients/ak.png') }}" alt="Client 2"></div>
+            <div class="client-logo"><img src="{{ asset('img/clients/gce.png') }}" alt="Client 3"></div>
+            <div class="client-logo"><img src="{{ asset('img/clients/manara.png') }}" alt="Client 4"></div>
+            <div class="client-logo"><img src="{{ asset('img/clients/micro.png') }}" alt="Client 5"></div>
+            <div class="client-logo"><img src="{{ asset('img/clients/orient.png') }}" alt="Client 6"></div>
+            <div class="client-logo"><img src="{{ asset('img/clients/techno.png') }}" alt="Client 7" style=" margin-top: 17px; width: 122%;margin-left: 101px;"></div>
+            <div class="client-logo"><img src="{{ asset('img/clients/tesco.jpeg') }}" alt="Client 8"></div>
+        </div>
+    </div>
+</section>
+
+
 
     
     <!-- Elegant Services Section -->
@@ -370,10 +406,13 @@
                 <div class="col-12 col-md-4 item">
                     <h3>{{__("Address")}}</h3>
                     <div class="contactInfo">
-                        <p>
-                            <i style="margin-right: 10px;" class="fas fa-map-marker-alt"></i> {{__("Jordan - Amman - Hashim Khair Street - Building 79")}}</p>
-                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+962795534658">{{__("00962-79-5534658")}}</a></p>
-                        <p><i class="fas fa-envelope"></i> <a href="mailto:hhattablawfirm@gmail.com">{{__("hhattablawfirm@gmail.com")}}</a></p>
+
+                    <p>
+                        <i id="footer-i" class="fas fa-map-marker-alt"></i> {{__("Jordan - Amman - Hashim Khair Street - Building 79")}}</p>
+                        <p><i id="footer-i" class="fas fa-phone-alt"></i> <a href="tel:+962795534658">{{__("00962-79-5534658")}}</a></p>
+                        <p><i id="footer-i" class="fas fa-envelope"></i> <a href="mailto:hhattablawfirm@gmail.com">{{__("hhattablawfirm@gmail.com")}}</a>
+                    </p>
+
                     </div>
                 </div>
                 <div class="col-12 col-md-4 item">
@@ -392,7 +431,7 @@
                 </div>
                 <div class="col-12 col-md-4 item text">
                     <h3>{{__("Hattab Law Firm")}}</h3>
-                    <p>{{__("A legal organization with deep family roots spanning three generations of dedication and excellence in the field of law.")}}</p>
+                    <!-- <p>{{__("A legal organization with deep family roots spanning three generations of dedication and excellence in the field of law.")}}</p> -->
                     <p>{{__("Recognized for delivering exceptional legal solutions that empower clients to navigate complex challenges with confidence and success.")}}</p>
                     <div class="social-media">
                         <a href="https://www.linkedin.com/company/al-hattab-attorneys-and-legal-consultants/about/?viewAsMember=true" target="_blank">
@@ -411,10 +450,14 @@
     </footer>
 </div>
     <!-- footer_end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <!-- JS here -->
     <script src="{{asset('home/js/vendor/modernizr-3.5.0.min.js')}}"></script>
@@ -446,6 +489,48 @@
     <script src="{{asset('home/js/main.js')}}"></script>
 
     <script>
+ $(document).ready(function () {
+    $(".clients-carousel").owlCarousel({
+        loop: true,               
+        margin: 30,               
+        nav: false,               
+        dots: false,              
+        autoplay: true,           
+        autoplayTimeout: 3000,    // Set to 5 seconds (increase this for a slower effect)
+        autoplaySpeed: 2000,      // Slower transition (2 seconds)
+        autoplayHoverPause: false,
+        slideBy: 1,               
+        smartSpeed: 2000,         // Smooth and slow transition
+        stagePadding: 10,         
+        responsive: {
+            0: { items: 2 },       
+            600: { items: 3 },     
+            1000: { items: 5 }     
+        }
+    });
+});
+
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const langSelector = document.querySelector(".lang-selector");
+    const langBtn = langSelector.querySelector(".lang-btn");
+
+    langBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        langSelector.classList.toggle("open");
+    });
+
+    document.addEventListener("click", function () {
+        langSelector.classList.remove("open");
+        });
+    });
+
+
+
+  
             $('#datepicker').datepicker({
                 iconsLibrary: 'fontawesome',
                 // disableDaysOfWeek: [0, 0],
