@@ -25,6 +25,9 @@
     .main-menu {
         display: none;
     }
+    .map-container {
+        width: 30%;
+    }
 }
 
 
@@ -77,7 +80,7 @@
     }
     .team-info p.bio {
         font-size: 13px;
-        font-weight: 700;
+        font-weight: 500;
         line-height: 1.6;
         color: #565656;
         text-align: justify;

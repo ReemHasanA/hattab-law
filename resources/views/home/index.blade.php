@@ -328,7 +328,7 @@
     <!-- practice_area_end -->
 
 
-    <!-- Our Clients Section -->
+   
 <!-- Our Clients Section -->
 <section class="clients-section">
     <div class="container">
@@ -341,11 +341,12 @@
             <div class="client-logo"><img src="{{ asset('img/clients/acdima.png') }}" alt="Client 1"></div>
             <div class="client-logo"><img src="{{ asset('img/clients/ak.png') }}" alt="Client 2"></div>
             <div class="client-logo"><img src="{{ asset('img/clients/gce.png') }}" alt="Client 3"></div>
-            <div class="client-logo"><img src="{{ asset('img/clients/manara.png') }}" alt="Client 4"></div>
-            <div class="client-logo"><img src="{{ asset('img/clients/micro.png') }}" alt="Client 5"></div>
+            <div class="client-logo"><img src="{{ asset('img/clients/manara.png') }}" alt="Client 4" style="margin-top: 28px;"></div>
+            <div class="client-logo"><img src="{{ asset('img/clients/micro.png') }}" alt="Client 5" style="margin-top: 28px;"></div>
             <div class="client-logo"><img src="{{ asset('img/clients/orient.png') }}" alt="Client 6"></div>
             <div class="client-logo"><img src="{{ asset('img/clients/techno.png') }}" alt="Client 7" style=" margin-top: 17px; width: 122%;margin-left: 101px;"></div>
-            <div class="client-logo"><img src="{{ asset('img/clients/tesco.jpeg') }}" alt="Client 8"></div>
+            <div class="client-logo"><img src="{{ asset('img/clients/tesco1.jpg') }}" alt="Client 8" style="width:143.333px; transform: scale(1.3); "></div>
+            <div class="client-logo"><img src="{{ asset('img/clients/gce1.png') }}" alt="Client 8"></div>
         </div>
     </div>
 </section>
@@ -365,7 +366,7 @@
                 </div>
                 <div class="service-content">
                     <h3>{{__("Comprehensive Services")}}</h3>
-                    <p>{{__("We offer a wide range of legal services, from divorce to child custody, ensuring the best guidance for you.")}}</p>
+                    <p>{{__("We provide a full range of legal services, combining expertise, dedication, and strategic solutions to meet every client's needs.")}}</p>
                 </div>
             </div>
 
@@ -387,7 +388,7 @@
                 </div>
                 <div class="service-content">
                     <h3>{{__("Client Satisfaction")}}</h3>
-                    <p>{{__("We prioritize client satisfaction, delivering excellent legal services with professionalism and dedication.")}}</p>
+                    <p>{{__("We are committed to delivering comprehensive legal services with professionalism, transparency, and a results-driven approach.")}}</p>
                 </div>
             </div>
         </div>
@@ -491,6 +492,7 @@
     <script>
  $(document).ready(function () {
     $(".clients-carousel").owlCarousel({
+        rtl: $("html").attr("dir") === "rtl", // Enable RTL mode
         loop: true,               
         margin: 30,               
         nav: false,               

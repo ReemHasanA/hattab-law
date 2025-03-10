@@ -5276,13 +5276,13 @@ h6 {
   text-align: center;
 }
 
-/* .service-title {
-  font-size: 40px;
-  font-weight: 700;
-  font-family: 'EB Garamond', serif;
-  color: #b89b5e;
-  margin-bottom: 50px;
-} */
+ .service-title {
+     font-size: 29px;
+    margin-bottom: 35px;
+    color: #b89b5e;
+    font-family: 'EB Garamond';
+    font-weight: 600;
+} 
 
 /* Grid Layout */
 .services-grid {
@@ -5325,9 +5325,10 @@ h6 {
 }
 
 .service-content p {
-  font-size: 16px;
+  text-align: justify;
+  font-size: 15px;
   color: #555;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 /* Responsive Design */
@@ -5473,7 +5474,7 @@ h6 {
       font-size: 20px;
   }
   .about-us p {
-      font-size: 16px;
+    padding: 25px;
   }
 }
 
@@ -5684,9 +5685,9 @@ h6 {
   background-color: #b89c5d; /* Gold color */
 }
 
-.values-section .container{
+/* .values-section .container{
   width: 900px;
-}
+} */
 
 
 

@@ -1,5 +1,5 @@
 .detail-container {
-    background-color: #1a1a1a;
+    background-color: #bebbb8;
     padding: 40px;
     border-radius: 10px;
     max-width: 900px;
@@ -48,7 +48,7 @@
 
 /* Paragraphs */
 .detail-description p {
-    color: #9a9090;
+    color: #000000;
     margin-bottom: 15px;
 }
 
