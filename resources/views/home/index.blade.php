@@ -350,7 +350,6 @@
 
 
 
-    
     <!-- Elegant Services Section -->
     <section class="services-section">
     <div class="container">
@@ -395,7 +394,6 @@
 
 
 
-
     <!-- footer_start -->
     <div class="footer-dark">
     <footer>
@@ -429,7 +427,6 @@
                 </div>
                 <div class="col-12 col-md-4 item text">
                     <h3>{{__("Al-Hattab attorneys")}}</h3>
-                    <!-- <p>{{__("A legal organization with deep family roots spanning three generations of dedication and excellence in the field of law.")}}</p> -->
                     <p>{{__("Recognized for delivering exceptional legal solutions that empower clients to navigate complex challenges with confidence and success.")}}</p>
                     <div class="social-media">
                         <a href="https://www.linkedin.com/company/al-hattab-attorneys-and-legal-consultants/about/?viewAsMember=true" target="_blank">
@@ -480,7 +477,6 @@
     <!--contact js-->
     <script src="{{asset('home/js/contact.js')}}"></script>
     <script src="{{asset('home/js/jquery.ajaxchimp.min.js')}}"></script>
-    <!-- <script src="{{asset('home/js/jquery.form.js')}}"></script> -->
     <script src="{{asset('home/js/jquery.validate.min.js')}}"></script>
     <script src="{{asset('home/js/mail-script.js')}}"></script>
 
@@ -489,17 +485,17 @@
     <script>
  $(document).ready(function () {
     $(".clients-carousel").owlCarousel({
-        rtl: $("html").attr("dir") === "rtl", // Enable RTL mode
+        rtl: $("html").attr("dir") === "rtl", 
         loop: true,               
         margin: 30,               
         nav: false,               
         dots: false,              
         autoplay: true,           
-        autoplayTimeout: 3000,    // Set to 5 seconds (increase this for a slower effect)
-        autoplaySpeed: 2000,      // Slower transition (2 seconds)
+        autoplayTimeout: 3000,   
+        autoplaySpeed: 2000,     
         autoplayHoverPause: false,
         slideBy: 1,               
-        smartSpeed: 2000,         // Smooth and slow transition
+        smartSpeed: 2000,        
         stagePadding: 10,         
         responsive: {
             0: { items: 2 },       
@@ -532,10 +528,6 @@
   
             $('#datepicker').datepicker({
                 iconsLibrary: 'fontawesome',
-                // disableDaysOfWeek: [0, 0],
-            //     icons: {
-            //      rightIcon: '<span class="fa fa-caret-down"></span>'
-            //  }
             });
             $('#datepicker2').datepicker({
                 iconsLibrary: 'fontawesome',
