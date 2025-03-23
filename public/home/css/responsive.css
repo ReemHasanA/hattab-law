@@ -1,4 +1,4 @@
-/* Adjust font sizes for better readability on mobile */
+
 @media (max-width: 768px) {
     h3, .section_title, .service-title {
         font-size: 29px;
@@ -7,18 +7,15 @@
         font-size: 1em;
     }
 
-    /* Center align text */
     .text-center {
         text-align: center;
     }
 
-    /* Adjust padding and margins */
     .container, .container-fluid {
         padding-left: 15px;
         padding-right: 15px;
     }
     
-    /* Mobile Menu Adjustments */
     .mobile_menu {
         display: block;
     }
@@ -31,7 +28,6 @@
 }
 
 
-/* Footer Responsive Adjustments */
 @media (max-width: 768px) {
     .footer-dark {
         padding: 20px;
@@ -74,6 +70,7 @@
     }
     .detail-description p{
         font-size: 15px;
+        white-space: pre-line;
     }
     .team-image img{
         width: 76%;

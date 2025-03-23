@@ -1,4 +1,4 @@
- /* General Styling */
+
  body {
     font-family: 'EB Garamond';
     background-color: #121212;
@@ -62,8 +62,6 @@
     font-weight: bold;
 }
 
-
-/* Sidebar Styling */
 .sidebar {
 width: 250px;
 height: 100vh;
@@ -131,7 +129,6 @@ display: block;
 color: #b89b5e;
 }
 
-/* Active Link Styling */
 .sidebar ul li a.active {
 color: #b89b5e;
 font-weight: bold;
@@ -214,8 +211,6 @@ background-color: #c0392b;
 }
 
 
-
-/* Mobile Responsive */
 @media (max-width: 768px) {
 .sidebar {
 width: 200px;

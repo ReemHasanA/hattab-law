@@ -1,6 +1,7 @@
-/* contact form page  */
+
 
 .contact_us_6 * {
+    margin-bottom: 17px;
     font-family: "EB Garamond", serif;
     font-size: 16px;
   }
@@ -445,13 +446,6 @@
       padding-bottom: 0px;
       padding-left: 20px;
     }
-  
-    /* .contact_us_6 .container-block.form-wrapper {
-      padding-top: 50px;
-      padding-right: 15px;
-      padding-bottom: 50px;
-      padding-left: 15px;
-    } */
   
     .contact_us_6 .mob-text {
       display: block;

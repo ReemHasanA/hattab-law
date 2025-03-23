@@ -1,5 +1,4 @@
-   /* Team Section */
-   .team-section {
+.team-section {
     padding: 50px 0;
     background-color: #f5f5f5;
     color: #333;
@@ -38,28 +37,28 @@
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    width: 82%;
-    height: 611px;
-    transition: transform 0.3sease -in-out, box-shadow 0.3sease -in-out;
+    width: 75%;
+    height: 549px;
     align-items: stretch;
 }
 
 
 .team-image {
-    flex: 1.7; /* Increased size */
+    flex: 1.7;
     overflow: hidden;
 }
 
 .team-image img {
-    width: 100%;
-    /* height: 114%; */
+    margin: -31px;
+    width: 105%;
+    height: auto;
     object-fit: contain;
     transition: transform 0.4sease-in-out;
 }
 
 
 .team-info {
-    flex: 1.3; /* Smaller than image */
+    flex: 1.3; 
     background-color: #fdfdfd;
     padding: 20px;
     overflow-y: auto;
@@ -86,7 +85,7 @@
 
 .team-info p.bio {
     margin: 0;
-    font-size: 14px;
+    font-size: 12.3px;
     font-weight: 400;
     line-height: 1.5;
     color: #555;
@@ -102,8 +101,6 @@
 }
 
 
-
-/* Responsive Design */
 @media (max-width: 992px) {
     .team-card {
         flex-direction: column;

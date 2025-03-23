@@ -28,6 +28,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
     
     <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
     <!-- FontAwesome 6 Free -->
@@ -66,48 +72,38 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                 <ul id="navigation">
-                                        <li><a class="active" href="{{url('/')}}">{{__("Home")}}</a></li>
-                                        <li><a href="{{url('about')}}">{{__("About")}}</a></li>
+                                <li><a href="{{ url('/') }}" class="{{ request()->path() == '/' ? 'active' : '' }}">{{ __("Home") }}</a></li>
+                                
+                                <li><a href="{{ url('about') }}" class="{{ request()->path() == 'about' ? 'active' : '' }}">{{ __("About") }}</a></li>
 
-                                        <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle custom-dropdown-toggle" href="{{url('practice')}}" id="practiceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle custom-dropdown-toggle {{ request()->is('practices*') ? 'active' : '' }}" href="#" id="practiceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         {{ __("Practice Areas") }}
                                     </a>
                                     <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="practiceDropdown">
-                                        @foreach ($practices as $practice)
+                                        @foreach ($practices as $single_practice)
                                             <li>
-                                                <a class="dropdown-item custom-dropdown-item" href="{{ route('practices.show', $practice->id) }}">
-                                                    {{ $practice->translated_name }}
+                                                <a class="dropdown-item custom-dropdown-item {{ request()->path() == 'practices/'.$single_practice->id ? 'active' : '' }}" href="{{ route('practices.show', $single_practice->id) }}">
+                                                    {{ app()->getLocale() == 'ar' ? $single_practice->name_ar : $single_practice->name_en }}
                                                 </a>
                                             </li>
                                         @endforeach
                                     </ul>
                                 </li>
 
-
-
-
-                                        <li><a href="{{url('team')}}">{{__("Our Team")}}</a></li>
-                                        <li><a href="{{url('contact')}}">{{__("Contact")}}</a></li>
-                                    </ul>
+                                <li><a href="{{ url('team') }}" class="{{ request()->path() == 'team' ? 'active' : '' }}">{{ __("Our Team") }}</a></li>
+                                
+                                <li><a href="{{ url('contact') }}" class="{{ request()->path() == 'contact' ? 'active' : '' }}">{{ __("Contact") }}</a></li>
+                            </ul>
                                 </nav>
                             </div>
                         </div>
                     
 
                         <div class="lang-selector">
-                        <button class="lang-btn">
-                            {{ app()->getLocale() === 'en' ? 'EN' : 'AR' }}
-                            <i class="fas fa-angle-down"></i>
-                        </button>
-                        <ul class="lang-menu">
-                            @if(app()->getLocale() === 'en')
-                                <li><a href="{{ url('lang/ar') }}">AR</a></li>
-                            @else
-                                <li><a href="{{ url('lang/en') }}">EN</a></li>
-                            @endif
-                        </ul>
-                    </div>
+                        <a href="{{ url('lang/en') }}" class="lang-btn {{ app()->getLocale() === 'en' ? 'active-lang' : '' }}">EN</a>
+                        <a href="{{ url('lang/ar') }}" class="lang-btn {{ app()->getLocale() === 'ar' ? 'active-lang' : '' }}">AR</a>
+                        </div>
 
 
                     <div class="col-12">
@@ -128,6 +124,7 @@
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
                         <h3>{{__("Our Team")}}</h3>
+                        <h1>{{__("Dedication. Expertise. Passion.")}}</h1>
                     </div>
                 </div>
             </div>
@@ -202,7 +199,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4 item text">
-                    <h3>{{__("Hattab Law Firm")}}</h3>
+                    <h3>{{__("Al-Hattab attorneys")}}</h3>
                     <!-- <p>{{__("A legal organization with deep family roots spanning three generations of dedication and excellence in the field of law.")}}</p> -->
                     <p>{{__("Recognized for delivering exceptional legal solutions that empower clients to navigate complex challenges with confidence and success.")}}</p>
                     <div class="social-media">

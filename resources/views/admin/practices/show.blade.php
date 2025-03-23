@@ -28,6 +28,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet" async>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
     
 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -104,18 +109,9 @@
                         </div>
 
                         <div class="lang-selector">
-                        <button class="lang-btn">
-                            {{ app()->getLocale() === 'en' ? 'EN' : 'AR' }}
-                            <i class="fas fa-angle-down"></i>
-                        </button>
-                        <ul class="lang-menu">
-                            @if(app()->getLocale() === 'en')
-                                <li><a href="{{ url('lang/ar') }}">AR</a></li>
-                            @else
-                                <li><a href="{{ url('lang/en') }}">EN</a></li>
-                            @endif
-                        </ul>
-                    </div>
+                        <a href="{{ url('lang/en') }}" class="lang-btn {{ app()->getLocale() === 'en' ? 'active-lang' : '' }}">EN</a>
+                        <a href="{{ url('lang/ar') }}" class="lang-btn {{ app()->getLocale() === 'ar' ? 'active-lang' : '' }}">AR</a>
+                        </div>
 
 
                     <div class="col-12">
@@ -185,7 +181,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4 item text">
-                    <h3>{{__("Hattab Law Firm")}}</h3>
+                    <h3>{{__("Al-Hattab attorneys")}}</h3>
                     <!-- <p>{{__("A legal organization with deep family roots spanning three generations of dedication and excellence in the field of law.")}}</p> -->
                     <p>{{__("Recognized for delivering exceptional legal solutions that empower clients to navigate complex challenges with confidence and success.")}}</p>
                     <div class="social-media">
@@ -247,6 +243,4 @@
 
 </body>
 </html>
-
-
 

@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'Majalla';
     src: url('/fonts/SakkalMajalla.woff2') format('woff2'),
          url('/fonts/SakkalMajalla.woff') format('woff'),
@@ -6,21 +6,21 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+} */
 
 body[dir='rtl'] {
     direction: rtl;
     text-align: right;
-    font-family: 'Majalla', sans-serif !important;
+    font-family: "Cairo", sans-serif !important;
 }
 .header-area .main-header-area .main-menu ul li a{
-    font-family: 'Majalla', sans-serif !important;
+    font-family: "Cairo", sans-serif !important;
 }
 .slider_area_inner .single_slider .slider_text h3{
-    font-family: 'Majalla', sans-serif !important;
+    font-family: "Cairo", sans-serif !important;
 }
 .boxed-btn4 {
-    font-family: 'Majalla', sans-serif !important;
+    font-family: "Cairo", sans-serif !important;
 }
 
 .slider_bg_1 {
@@ -40,24 +40,26 @@ body[dir='rtl'] {
     background-position: right;
 }
 h1, h2, h3, h4, h5{
-    font-family: 'Majalla', sans-serif !important;
+    font-family: "Cairo", sans-serif !important;
 }
 
 p{
-    font-family: 'Majalla', sans-serif !important;
+    font-family: "Cairo", sans-serif !important;
 }
 .about_area .single_about_info p{
-    font-size: 33px;
+    font-size: 23px;
+    line-height: 1.6;
 }
 .footer-dark{
     direction: ltr;
 }
 
 .value-box ul li{
-    display: flex;
-    margin-left: 34px;
+    font-family: 'Cairo';
+    margin-right: 61px;
+    display: block;
     text-align: justify;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
     padding: 5px 0;
     margin-bottom: 18px;
@@ -65,7 +67,7 @@ p{
 }
 
 .about-us h2{
-    font-size: 36px;
+    font-size: 25px;
     font-weight: 700;
     color: #b89b5e;
     text-transform: uppercase;
@@ -78,7 +80,9 @@ p{
     font-size: 20px;
 }
 .detail-description{
+    font-family: 'Cairo';
     text-align: right;
+    white-space: pre-line;
     
 }
 
@@ -86,9 +90,16 @@ p{
     font-size: 20px;
     color: #000000;
 }
-
+.team-image{
+    overflow: hidden;
+}
+.team-image img{
+    width: 107%;
+    height: auto;
+    object-fit: contain;
+}
 .team-info p.bio {
-    font-size: 17px;
+    font-size: 14px;
 }
 .team-info h3.member-name{
     text-align: right;
@@ -103,6 +114,7 @@ p{
 }
 
 .contact_us_6 *{
+    margin-bottom: 16px;
     text-align: right;
 }
 .contact_us_6 .text-blk.input-title{
@@ -115,7 +127,10 @@ p{
 }
 
 .practice_area .single_practice .practice_hover p {
-    font-size: 15px;
+        font-size: 13px;
+        text-align: justify;
+        height: 10px;
+        margin-bottom: 134px;
 }
 @media (max-width: 420px){
     .lang-btn{
@@ -127,12 +142,12 @@ p{
         margin-right: 269px;
     }
     .slider_area_inner .single_slider .slider_text h3{
-    font-family: 'Majalla', sans-serif !important;
+        font-family: "Cairo", sans-serif !important;
     font-size: 33px;
     font-weight: 100;
 }
 .boxed-btn4 {
-    font-family: 'Majalla', sans-serif !important;
+    font-family: "Cairo", sans-serif !important;
     width: 166px;
 }
 .section_title span{
@@ -195,12 +210,12 @@ p{
         margin-right: 269px;
     }
     .slider_area_inner .single_slider .slider_text h3{
-    font-family: 'Majalla', sans-serif !important;
+        font-family: "Cairo", sans-serif !important;
     font-size: 33px;
     font-weight: 100;
 }
 .boxed-btn4 {
-    font-family: 'Majalla', sans-serif !important;
+    font-family: "Cairo", sans-serif !important;
     width: 166px;
 }
 .section_title span{
@@ -264,7 +279,7 @@ p{
         margin-right: 269px;
     }
     .slider_area_inner .single_slider .slider_text h3{
-    font-family: 'Majalla', sans-serif !important;
+        font-family: "Cairo", sans-serif !important;
     font-size: 33px;
     font-weight: 100;
 }
@@ -273,7 +288,7 @@ p{
     display: block;
 }
 .boxed-btn4 {
-    font-family: 'Majalla', sans-serif !important;
+    font-family: "Cairo", sans-serif !important;
     width: 166px;
 }
 .about-us h2 {

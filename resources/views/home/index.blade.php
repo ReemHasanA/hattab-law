@@ -29,6 +29,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
     <!-- FontAwesome 6 Free -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -72,52 +76,45 @@
                             </a>
                         </div>
                     </div>
+
+
                     <div class="col-xl-7 col-lg-8">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                 <ul id="navigation">
-                                        <li><a class="active" href="{{url('/')}}">{{__("Home")}}</a></li>
-                                        <li><a href="{{url('about')}}">{{__("About")}}</a></li>
+                                <li><a href="{{ url('/') }}" class="{{ request()->path() == '/' ? 'active' : '' }}">{{ __("Home") }}</a></li>
+                                
+                                <li><a href="{{ url('about') }}" class="{{ request()->path() == 'about' ? 'active' : '' }}">{{ __("About") }}</a></li>
 
-                                        
-                                        <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle custom-dropdown-toggle" href="#" id="practiceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            {{ __("Practice Areas") }}
-                                        </a>
-                                        <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="practiceDropdown">
-                                            @foreach ($practices as $single_practice)
-                                                <li>
-                                                    <a class="dropdown-item custom-dropdown-item" href="{{ route('practices.show', $single_practice->id) }}">
-                                                        {{ app()->getLocale() == 'ar' ? $single_practice->name_ar : $single_practice->name_en }}
-                                                    </a>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </li>
-
-
-
-                                        <li><a href="{{url('team')}}">{{__("Our Team")}}</a></li>
-                                        <li><a href="{{url('contact')}}">{{__("Contact")}}</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle custom-dropdown-toggle {{ request()->is('practices*') ? 'active' : '' }}" href="#" id="practiceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{ __("Practice Areas") }}
+                                    </a>
+                                    <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="practiceDropdown">
+                                        @foreach ($practices as $single_practice)
+                                            <li>
+                                                <a class="dropdown-item custom-dropdown-item {{ request()->path() == 'practices/'.$single_practice->id ? 'active' : '' }}" href="{{ route('practices.show', $single_practice->id) }}">
+                                                    {{ app()->getLocale() == 'ar' ? $single_practice->name_ar : $single_practice->name_en }}
+                                                </a>
+                                            </li>
+                                        @endforeach
                                     </ul>
+                                </li>
+
+                                <li><a href="{{ url('team') }}" class="{{ request()->path() == 'team' ? 'active' : '' }}">{{ __("Our Team") }}</a></li>
+                                
+                                <li><a href="{{ url('contact') }}" class="{{ request()->path() == 'contact' ? 'active' : '' }}">{{ __("Contact") }}</a></li>
+                            </ul>
                                 </nav>
                             </div>
                         </div>
             
 
                         <div class="lang-selector">
-                        <button class="lang-btn">
-                            {{ app()->getLocale() === 'en' ? 'EN' : 'AR' }}
-                            <i class="fas fa-angle-down"></i>
-                        </button>
-                        <ul class="lang-menu">
-                            @if(app()->getLocale() === 'en')
-                                <li><a href="{{ url('lang/ar') }}">AR</a></li>
-                            @else
-                                <li><a href="{{ url('lang/en') }}">EN</a></li>
-                            @endif
-                        </ul>
-                    </div>
+                        <a href="{{ url('lang/en') }}" class="lang-btn {{ app()->getLocale() === 'en' ? 'active-lang' : '' }}">EN</a>
+                        <a href="{{ url('lang/ar') }}" class="lang-btn {{ app()->getLocale() === 'ar' ? 'active-lang' : '' }}">AR</a>
+                        </div>
+
 
 
 
@@ -147,7 +144,7 @@
                                 <span>
                                     {{__("legal solutions tailored to your needs")}}</span>  </h3>
                                 
-                                <a href="{{url('contact')}}" class="boxed-btn4 ">{{__("Contact Us")}}</a>
+                                <a href="{{url('contact')}}" class="boxed-btn4 ">{{__("Request a consultation")}}</a>
                             </div>
                         </div>
                     </div>
@@ -166,7 +163,7 @@
         <div class="row justify-content-center">
             <div class="col-xl-8 col-lg-10">
                 <div class="single_about_info text-center">
-                    <h2 class="section_title">{{__("About")}} <span>{{__("Al Hattab Law Firm")}}</span></h2>
+                    <h2 class="section_title"><span>{{__("ABOUT US")}}</span></h2>
                     <p class="about_text">
                     {{__("Al Hattab Law Firm is a legal organization with deep family roots spanning three generations of dedication and excellence in the field of law. Founded by Bashir Al Hattab, one of the leading lawyers in Jordan and Palestine, who held bar number 20, he established a distinguished professional approach that has allowed his family's legal legacy to endure for generations, inspiring them to continue their legal careers.")}}
                     </p>
@@ -203,7 +200,7 @@
                             <div class="hover_inner">
                                 <i class="flaticon-case"></i>
                                 <h3>{{__("Litigation and Arbitration")}}</h3>
-                                <p>{{__("Al Hattab Law Firm is distinguished by its specialized team in various fields of arbitration and litigation highly trusted by clients as arbitrators and mediators")}}</p>
+                                <p>{{__("Al Hattab Law Firm is distinguished by its specialized team in various fields of arbitration and litigation highly trusted by clients as arbitrators and mediators.")}}</p>
                                 
                             </div>
                         </div>
@@ -219,7 +216,7 @@
                             <div class="hover_inner">
                                 <i class="flaticon-courthouse"></i>
                                 <h3>{{__("Tax and Customs services")}}</h3>
-                                <p>{{__("Al Hattab Law Firm provides a comprehensive range of tax and customs services to assist clients in complying with both local and foreign legislation")}}</p>
+                                <p>{{__("Al Hattab Law Firm provides a comprehensive range of tax and customs services to assist clients in complying with both local and foreign legislation.")}}</p>
                                 
                             </div>
                         </div>
@@ -235,7 +232,7 @@
                             <div class="hover_inner">
                                 <i class="flaticon-judge"></i>
                                 <h3>{{__("Intellectual property")}}</h3>
-                                <p>{{__("Al Hattab offers a wide range of services to ensure the protection of the intellectual property (IP) rights of its clients and their creative businesses")}}</p>
+                                <p>{{__("Al Hattab offers a wide range of services to ensure the protection of the intellectual property (IP) rights of its clients and their creative businesses.")}}</p>
                                
                             </div>
                         </div>
@@ -251,7 +248,7 @@
                             <div class="hover_inner">
                                 <i class="flaticon-jury"></i>
                                 <h3>{{__("Corporate")}}</h3>
-                                <p>{{__("Our Corporate team provides comprehensive legal support to companies, from incorporation to the execution of their growth and expansion strategies")}}</p>
+                                <p>{{__("Our Corporate team provides comprehensive legal support to companies, from incorporation to the execution of their growth and expansion strategies.")}}</p>
                             </div>
                         </div>
                     </div>
@@ -266,7 +263,7 @@
                             <div class="hover_inner">
                                 <i class="flaticon-jury"></i>
                                 <h3>{{__("Family and Inheritance")}}</h3>
-                                <p>{{__("Al Hattab Law Firm has extensive experience in handling family and inheritance matters. We provide legal advice and representation in cases involving marriage, divorce,custody")}}</p>
+                                <p>{{__("Al Hattab Law Firm has extensive experience in handling family and inheritance matters. We provide legal advice and representation in cases involving marriage, divorce,custody.")}}</p>
                                
                             </div>
                         </div>
@@ -282,7 +279,7 @@
                             <div class="hover_inner">
                             <i class="flaticon-judge"></i>
                                 <h3>{{__("Citizenship, Residency and Investment")}}</h3>
-                                <p>{{__("Al Hattab Law Firm is characterized by its ability to deal with various cases and legal issues related to citizenship, residency and investment")}}</p>
+                                <p>{{__("Al Hattab Law Firm is characterized by its ability to deal with various cases and legal issues related to citizenship, residency and investment.")}}</p>
                                 
                             </div>
                         </div>
@@ -298,7 +295,7 @@
                             <div class="hover_inner">
                             <i class="flaticon-courthouse"></i>
                                 <h3>{{__("Organization and Association")}}</h3>
-                                <p>{{__("Al Hattab Law Firm, through its experienced team, offers comprehensive legal support to local and international organizations and associations across various sectors")}}</p>
+                                <p>{{__("Al Hattab Law Firm, through its experienced team, offers comprehensive legal support to local and international organizations and associations across various sectors.")}}</p>
                                 
                             </div>
                         </div>
@@ -314,7 +311,7 @@
                             <div class="hover_inner">
                             <i class="flaticon-case"></i>
                                 <h3>{{__("Specialized Legal Services")}}</h3>
-                                <p>{{__("Al Hattab Law Firm, through its experienced team, offers extensive expertise in a range of specialized legal aspects. We can provide a number of specialized services")}}</p>
+                                <p>{{__("Al Hattab Law Firm, through its experienced team, offers extensive expertise in a range of specialized legal aspects. We can provide a number of specialized services.")}}</p>
                                
                             </div>
                         </div>
@@ -338,11 +335,11 @@
         <div class="title-line"></div>
         </div>
         <div class="owl-carousel clients-carousel">
-            <div class="client-logo"><img src="{{ asset('img/clients/acdima.png') }}" alt="Client 1"></div>
+            <div class="client-logo"><img src="{{ asset('img/clients/acdima.png') }}" alt="Client 1" style="margin-top: 8px;"></div>
             <div class="client-logo"><img src="{{ asset('img/clients/ak.png') }}" alt="Client 2"></div>
-            <div class="client-logo"><img src="{{ asset('img/clients/gce.png') }}" alt="Client 3"></div>
-            <div class="client-logo"><img src="{{ asset('img/clients/manara.png') }}" alt="Client 4" style="margin-top: 28px;"></div>
-            <div class="client-logo"><img src="{{ asset('img/clients/micro.png') }}" alt="Client 5" style="margin-top: 28px;"></div>
+            <div class="client-logo"><img src="{{ asset('img/clients/gce.png') }}" alt="Client 3" style="margin-top: 8px;"></div>
+            <div class="client-logo"><img src="{{ asset('img/clients/manara.png') }}" alt="Client 4" style="margin-top: 22px;"></div>
+            <div class="client-logo"><img src="{{ asset('img/clients/micro.png') }}" alt="Client 5" style="margin-top: 26px;"></div>
             <div class="client-logo"><img src="{{ asset('img/clients/orient.png') }}" alt="Client 6"></div>
             <div class="client-logo"><img src="{{ asset('img/clients/techno.png') }}" alt="Client 7" style=" margin-top: 17px; width: 122%;margin-left: 101px;"></div>
             <div class="client-logo"><img src="{{ asset('img/clients/tesco1.jpg') }}" alt="Client 8" style="width:143.333px; transform: scale(1.3); "></div>
@@ -431,7 +428,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4 item text">
-                    <h3>{{__("Hattab Law Firm")}}</h3>
+                    <h3>{{__("Al-Hattab attorneys")}}</h3>
                     <!-- <p>{{__("A legal organization with deep family roots spanning three generations of dedication and excellence in the field of law.")}}</p> -->
                     <p>{{__("Recognized for delivering exceptional legal solutions that empower clients to navigate complex challenges with confidence and success.")}}</p>
                     <div class="social-media">

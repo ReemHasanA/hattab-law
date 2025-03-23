@@ -1,5 +1,5 @@
 .detail-container {
-    background-color: #bebbb8;
+    background-color: #f6f6f6;
     padding: 40px;
     border-radius: 10px;
     max-width: 900px;
@@ -9,59 +9,31 @@
     color: #fff;
 }
 
-/* Title */
 .detail-container h1 {
     color: #b89b5e;
-    margin-bottom: 20px;
-    font-size: 28px;
+    margin-bottom: 2px;
+    font-size: 29px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
-    display: inline-block;
 }
 
 .detail-image {
     display: none;
 }
 
-/* Title Underline */
-.detail-container h1::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: #b89b5e;
-    margin: 10px auto 20px;
-}
-
-/* Description Styling */
 .detail-description {
     text-align: left;
-    color: #ddd;
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    border-left: 4px solid #b89b5e;
-    padding-left: 15px;
-}
-
-/* Paragraphs */
-.detail-description p {
     color: #000000;
-    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 2.8;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    white-space: pre-line;
 }
 
-/* Section Headings */
-.detail-description h2, 
-.detail-description h3 {
-    color: #b89b5e;
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-}
 
-/* Dividers */
 .detail-description hr {
     border: none;
     height: 1px;
@@ -69,7 +41,6 @@
     margin: 15px 0;
 }
 
-/* Button */
 .btn-secondary {
     background-color: #b89b5e;
     color: #121212;
@@ -90,3 +61,56 @@
     color: #fff;
     transform: scale(1.05);
 }
+
+
+.detail-description .paragraph-block {
+    padding-right: 15px;
+    font-size: 5px;
+  }
+  
+  .detail-description .paragraph-block h3 {
+    color: #b89b5e;       
+    margin-bottom: 0.5rem;
+    text-align: right;    
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: relative;
+  }
+  
+  .detail-description .paragraph-block p {
+    text-align: right;     
+    color: #000;
+    line-height: 1.8;
+    margin-bottom: 0;      
+    font-size: 1rem;
+    white-space: normal;   
+  }
+  
+
+
+  [dir="rtl"] .detail-description {
+    text-align: right;  
+  }
+  [dir="rtl"] .detail-description .paragraph-block {
+    border-right: 3px solid #b89b5e;
+    padding-right: 15px;
+  }
+  [dir="rtl"] .detail-description .paragraph-block h3,
+  [dir="rtl"] .detail-description .paragraph-block p {
+    text-align: right; 
+  }
+  
+  /* ----------------------
+     LTR (English) Styles
+  ----------------------- */
+  [dir="ltr"] .detail-description {
+    text-align: left; 
+  }
+  [dir="ltr"] .detail-description .paragraph-block {
+    border-left: 3px solid #b89b5e;
+    padding-left: 15px;
+  }
+  [dir="ltr"] .detail-description .paragraph-block h3,
+  [dir="ltr"] .detail-description .paragraph-block p {
+    text-align: left;
+  }
