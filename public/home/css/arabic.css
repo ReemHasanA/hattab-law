@@ -66,7 +66,7 @@ p{
     color: #a79d9d;
 }
 
-.about-us h2{
+/* .about-us h2{
     font-size: 25px;
     font-weight: 700;
     color: #b89b5e;
@@ -75,7 +75,8 @@ p{
     display: inline-block;
     padding-bottom: 10px;
     margin-left: 507px;
-}
+} */
+
 .about-us p{
     font-size: 20px;
 }
