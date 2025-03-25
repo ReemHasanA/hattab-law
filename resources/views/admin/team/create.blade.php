@@ -132,7 +132,8 @@
                             <span class="full-text">{{ $member->bio_ar }}</span>
                         </td>
                         <td class="action-buttons" style="height: 84px;">
-                            <form action="{{ route('team.delete', $member->id) }}" method="POST" style="display:inline;">
+                            <a href="{{ route('team.edit', $member->id) }}" class="btn btn-info">{{__('Edit')}}</a>
+                            <form action="{{ route('team.delete', $member->id) }}" method="POST" >
                                 @csrf
                                 <button type="submit" class="btn btn-delete">Delete</button>
                             </form>

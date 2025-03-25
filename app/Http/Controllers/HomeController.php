@@ -20,11 +20,6 @@ class HomeController extends Controller
         return view('home.about', compact('practices'));
     }
 
-    public function practice()
-    {
-        return view('home.practice');
-    }
-
     public function team()
     {
         return view('home.team');

@@ -7,12 +7,6 @@ use Illuminate\Http\Request;
 
 class PracticeController extends Controller
 {
-    public function index()
-    {
-        $practices = Practice::all(); // Fetch all practices
-
-        return view('home.practice', compact('practices')); // Ensure the correct view path
-    }
 
     public function create()
     {

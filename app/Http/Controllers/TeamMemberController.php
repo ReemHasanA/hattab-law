@@ -80,7 +80,7 @@ class TeamMemberController extends Controller
             'position_ar' => 'nullable|string|max:255',
             'bio_en' => 'nullable|string',
             'bio_ar' => 'nullable|string',
-            'photo' => 'image|mimes:jpeg,png,jpg|max:2048',
+            'photo' => 'image|mimes:jpeg,png,jpg',
         ]);
 
         $data = $request->only([

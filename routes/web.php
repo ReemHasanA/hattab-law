@@ -12,14 +12,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware([SetLocale::class])->group(function () {
     Route::get('/', [HomeController::class, 'home']);
     Route::get('about', [HomeController::class, 'about']);
-    Route::get('practice', [HomeController::class, 'practice']);
-    Route::get('team', [HomeController::class, 'team']);
     Route::get('contact', [HomeController::class, 'contact']);
+    // Public Page to View Team
+    Route::get('/team', [TeamMemberController::class, 'index'])->name('team.index');
 });
-
-// for dynamic practice area
-Route::get('/practice', [PracticeController::class, 'index']);
-// Route::resource('practices', PracticeController::class);
 
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
 Route::post('/login', [AuthenticatedSessionController::class, 'store']);
@@ -35,22 +31,17 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::post('/practices/update/{id}', [PracticeController::class, 'update'])->name('practices.update');
     Route::delete('/practices/destroy/{id}', [PracticeController::class, 'destroy'])->name('practices.destroy');
     
-    Route::post('/additional/store', [PracticeController::class, 'storeAdditional'])->name('additional.store');
+    // Admin Routes for Managing Team
+    Route::get('/team/create', [TeamMemberController::class, 'create'])->name('team.create');
+    Route::post('/team/store', [TeamMemberController::class, 'store'])->name('team.store');
+    // Edit and Update Team Member
+    Route::get('/team/{id}/edit', [TeamMemberController::class, 'edit'])->name('team.edit');
+    Route::post('/team/{id}/update', [TeamMemberController::class, 'update'])->name('team.update');
+    // Delete Team Member
+    Route::post('/team/{id}/delete', [TeamMemberController::class, 'destroy'])->name('team.delete');
 });
 
-// Public Page to View Team
-Route::get('/team', [TeamMemberController::class, 'index'])->name('team.index');
 
-// Admin Routes for Managing Team
-Route::get('/admin/team/create', [TeamMemberController::class, 'create'])->name('team.create');
-Route::post('/admin/team/store', [TeamMemberController::class, 'store'])->name('team.store');
-
-// Edit and Update Team Member
-Route::get('/admin/team/{id}/edit', [TeamMemberController::class, 'edit'])->name('team.edit');
-Route::post('/admin/team/{id}/update', [TeamMemberController::class, 'update'])->name('team.update');
-
-// Delete Team Member
-Route::post('/admin/team/{id}/delete', [TeamMemberController::class, 'destroy'])->name('team.delete');
 
 // for language switching
 Route::get('/lang/{locale}', function ($locale) {
