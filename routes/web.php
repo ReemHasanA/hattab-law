@@ -15,7 +15,9 @@ Route::middleware([SetLocale::class])->group(function () {
     Route::get('contact', [HomeController::class, 'contact']);
     // Public Page to View Team
     Route::get('/team', [TeamMemberController::class, 'index'])->name('team.index');
+    Route::get('/practices/{id}', [PracticeController::class, 'show'])->name('practices.show');
 });
+
 
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
 Route::post('/login', [AuthenticatedSessionController::class, 'store']);
@@ -56,8 +58,6 @@ Route::get('/lang/{locale}', function ($locale) {
 Route::get('/admin/board', function () {
     return view('admin.board');
 })->name('admin.board');
-
-Route::get('/practices/{id}', [PracticeController::class, 'show'])->name('practices.show');
 
 
 

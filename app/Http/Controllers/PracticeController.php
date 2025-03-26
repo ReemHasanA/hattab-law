@@ -90,6 +90,6 @@ class PracticeController extends Controller
         // Get the specific practice by ID
         $practice1 = Practice::findOrFail($id);
 
-        return view('admin.practices.show', compact('practices', 'practice1'));
+        return view('home.practices-show', compact('practices', 'practice1'));
     }
 }

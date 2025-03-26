@@ -20,11 +20,6 @@ class HomeController extends Controller
         return view('home.about', compact('practices'));
     }
 
-    public function team()
-    {
-        return view('home.team');
-    }
-
     public function contact()
     {
         $practices = Practice::all();
