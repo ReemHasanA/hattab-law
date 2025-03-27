@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="row no-gutters">
-                <div class="col-xl-3 col-md-6 col-sm-12">
+                <a href="{{url('practices',1)}}" class="col-xl-3 col-md-6 col-sm-12">
                     <div class="single_practice">
                         <div class="practice_image">
                             <img src="img/practice/1.png" alt="">
@@ -73,9 +73,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="col-xl-3 col-md-6 col-sm-12">
+                <a href="{{url('practices',2)}}" class="col-xl-3 col-md-6 col-sm-12">
                     <div class="single_practice">
                         <div class="practice_image">
                             <img src="img/practice/2.png" alt="">
@@ -89,9 +89,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="col-xl-3 col-md-6 col-sm-12">
+                <a href="{{url('practices',3)}}" class="col-xl-3 col-md-6 col-sm-12">
                     <div class="single_practice">
                         <div class="practice_image">
                             <img src="img/practice/3.png" alt="">
@@ -105,9 +105,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="col-xl-3 col-md-6 col-sm-12">
+                <a href="{{url('practices',4)}}" class="col-xl-3 col-md-6 col-sm-12">
                     <div class="single_practice">
                         <div class="practice_image">
                             <img src="img/practice/4.png" alt="">
@@ -120,9 +120,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="col-xl-3 col-md-6 col-sm-12">
+                <a href="{{url('practices',6)}}" class="col-xl-3 col-md-6 col-sm-12">
                     <div class="single_practice">
                         <div class="practice_image">
                             <img src="img/practice/4.png" alt="">
@@ -136,9 +136,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="col-xl-3 col-md-6 col-sm-12">
+                <a href="{{url('practices',7)}}" class="col-xl-3 col-md-6 col-sm-12">
                     <div class="single_practice">
                         <div class="practice_image">
                             <img src="img/practice/4.png" alt="">
@@ -152,9 +152,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="col-xl-3 col-md-6 col-sm-12">
+                <a href="{{url('practices',5)}}" class="col-xl-3 col-md-6 col-sm-12">
                     <div class="single_practice">
                         <div class="practice_image">
                             <img src="img/practice/4.png" alt="">
@@ -168,9 +168,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="col-xl-3 col-md-6 col-sm-12">
+                <a href="{{url('practices',8)}}" class="col-xl-3 col-md-6 col-sm-12">
                     <div class="single_practice">
                         <div class="practice_image">
                             <img src="img/practice/4.png" alt="">
@@ -184,9 +184,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-
+                </a>
             </div>
         </div>
     </div>

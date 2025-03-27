@@ -123,14 +123,13 @@
         font-size: 15px;
     }
     .about-us p{
-        width: 49%;
         font-size: 13px;
     }
     .container .row .col-md-4 p{
         font-size: 16px;
-        width: 78%;
+        width: 80%;
         text-align: justify;
-        margin-left: 65px;
+        margin-left: auto;
     }
     .value-box ul li{
         font-size: 15px;

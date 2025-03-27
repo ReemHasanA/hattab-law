@@ -5,9 +5,25 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>⚖️ Hattab Law Firm</title>
+    <title>Hattab Law Firm @yield('title', 'Hattab lawyer')</title>
+    
+  <link rel="canonical" href="{{url('/')}}"/>
+  <meta property="og:title" content="@yield('title') | Hattab law Firm"/>
+  <meta property="og:image" content="{{url('/img/homePage/logo.png')}}"/>
+  <meta property="og:image:width" content="2500"/>
+  <meta property="og:image:height" content="1330"/>
+  <meta property="og:url" content="{{url('/')}}"/>
+  <meta property="og:site_name" content="hattab"/>
+  <meta property="og:type" content="website"/>
+  <script type="application/ld+json">{"@context":"https://schema.org/","@type":"LocalBusiness","name":"Hattab Law","url":"{{url('/')}}","image":"{{url('img/homePage/logo.png')}}","address":{"@type":"PostalAddress","addressCountry":"JO","addressLocality":"Amman"}}</script>
+  <link rel="alternate" href="{{url('/about')}}" type="application/rss+xml" title="hattab - RSS"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="@yield('title') | Hattab Law Firm"/>
+  <meta name="twitter:image" content="{{url('img/homePage/logo.png')}}"/>
+
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" sizes="192x192" href="{{url('img/homePage/logo.png')}}" type="image/jpeg">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{asset('home/css/bootstrap.min.css')}}">
@@ -137,13 +153,15 @@
                     <h3>{{__("Practice Areas")}}</h3>
                     <div class="practiceArea">
                         <ul>
-                            <li>{{__("Litigation and Arbitration")}}</li>
-                            <li>{{__("Tax and Customs services")}}</li>
+                            @foreach ($practices as $practice)
+                            <li><a href="{{url('practices', $practice->id)}}">{{ $practice->name }}</a></li>
+                            @endforeach
+                            {{-- <li>{{__("Tax and Customs services")}}</li>
                             <li>{{__("Intellectual property")}}</li>
                             <li>{{__("Family and Inheritance")}}</li>
                             <li>{{__("Citizenship, Residency and Investment")}}</li>
                             <li>{{__("Organization and Association")}}</li>
-                            <li>{{__("Specialized Legal Services")}}</li>
+                            <li>{{__("Specialized Legal Services")}}</li> --}}
                         </ul>
                     </div>
                 </div>

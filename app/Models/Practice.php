@@ -24,4 +24,9 @@ class Practice extends Model
 
         return $locale === 'ar' ? $this->description_ar : $this->description_en;
     }
+
+    public function getNameAttribute()
+    {
+        return $this['name_' . app()->getLocale()];
+    }
 }
