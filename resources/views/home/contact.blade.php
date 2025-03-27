@@ -7,8 +7,14 @@
 @section('body')
   <div class="contact_us_6">
   <div class="responsive-container-block container">
-    <form class="form-box">
+    <form class="form-box" action="{{ route('contact.store') }}" method="POST">
+      @csrf
       <div class="container-block form-wrapper">
+        @if (session('success'))
+            <div class="success-message">
+              <h2>{{ session('success') }}</h2>
+            </div>
+        @else
         <div class="mob-text">
           <p class="text-blk contactus-head">
             {{__("Request a consultation")}}
@@ -19,30 +25,43 @@
             <p class="text-blk input-title">
               {{__("Name")}}
             </p>
-            <input class="input" id="ijowk-3" name="FirstName" placeholder="{{__('Please enter your name...')}}">
+            <input type="text" class="input" id="ijowk-3" name="name" placeholder="{{__('Please enter your name...')}}" maxlength="100" value="{{ old('name') }}">
+            @error('name')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
           </div>
           <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="ip1yp">
             <p class="text-blk input-title">
               {{__("Email")}}
             </p>
-            <input class="input" id="ipmgh-3" name="Email" placeholder="{{__('Please enter your email...')}}">
+            <input type="email" class="input" id="ipmgh-3" name="email" placeholder="{{__('Please enter your email...')}}" maxlength="100" value="{{ old('email') }}">
+            @error('email')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
           </div>
           <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="ih9wi">
             <p class="text-blk input-title">
               {{__("Phone Number")}}
             </p>
-            <input class="input" id="imgis-3" name="PhoneNumber" placeholder="{{__('Please enter your phone number...')}}">
+            <input type="text" class="input" id="imgis-3" name="phone_number" placeholder="{{__('Please enter your phone number...')}}" maxlength="20" value="{{ old('phone_number') }}">
+            @error('phone_number')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
           </div>
           <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-3">
             <p class="text-blk input-title">
               {{__("Message")}}
             </p>
-            <textarea class="textinput" id="i5vyy-3" placeholder="{{__('Type your message here...')}}"></textarea>
+            <textarea class="textinput" id="i5vyy-3" name="message" placeholder="{{__('Type your message here...')}}">{{ old('message') }}</textarea>
+            @error('message')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
           </div>
         </div>
-        <button class="submit-btn" id="w-c-s-bgc_p-1-dm-id-2">
+        <button class="btn submit-btn" id="w-c-s-bgc_p-1-dm-id-2">
           {{__("Submit")}}
         </button>
+        @endif
       </div>
     </form>
     <div class="responsive-cell-block wk-desk-7 wk-ipadp-12 wk-tab-12 wk-mobile-12" id="i772w">

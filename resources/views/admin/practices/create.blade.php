@@ -111,13 +111,13 @@
                 <span class="full-text">{{ $practice->description_ar }}</span>
             </td>
             <td class="action-buttons">
-    <!-- <a href="{{ route('practices.edit', $practice->id) }}" class="btn btn-edit">Edit</a> -->
-    <form action="{{ route('practices.destroy', $practice->id) }}" method="POST" style="display:inline;">
-        @csrf
-        @method('DELETE')
-        <button type="submit" class="btn btn-delete">Delete</button>
-    </form>
-</td>
+                <!-- <a href="{{ route('practices.edit', $practice->id) }}" class="btn btn-edit">Edit</a> -->
+                <form action="{{ route('practices.destroy', $practice->id) }}" method="POST" style="display:inline;">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-delete">Delete</button>
+                </form>
+            </td>
 
         </tr>
     @endforeach
