@@ -64,7 +64,7 @@
         @endif
       </div>
     </form>
-    <div class="wk-desk-7 wk-ipadp-12 wk-tab-12 wk-mobile-12" id="i772w">
+    <div class="wk-desk-7 wk-ipadp-12 wk-tab-12 wk-mobile-12 p-3" id="i772w">
       <div class="map-part w-100">
 
         <!-- Embedded Google Map -->
