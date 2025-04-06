@@ -64,8 +64,8 @@
         @endif
       </div>
     </form>
-    <div class="responsive-cell-block wk-desk-7 wk-ipadp-12 wk-tab-12 wk-mobile-12" id="i772w">
-      <div class="map-part">
+    <div class="wk-desk-7 wk-ipadp-12 wk-tab-12 wk-mobile-12" id="i772w">
+      <div class="map-part w-100">
 
         <!-- Embedded Google Map -->
         <div class="map-container" >

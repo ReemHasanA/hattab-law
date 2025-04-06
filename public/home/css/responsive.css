@@ -85,11 +85,9 @@
     .map-part .map-container{
         width: 94%;
         height: 300px;
-        margin-left: 81px;
     }
     .contact_us_6  p{
         font-size: 14px;
-        margin-left: 54px;
         text-align: justify;
         margin-bottom: 27px;
         margin-top: 19px;
@@ -108,7 +106,6 @@
         font-size: 33px;
     }
     .slider_area_inner .single_slider .slider_text h3{
-        margin-top: -162px;
         font-size: 16px;
         line-height: 35px;
         font-weight: 900;

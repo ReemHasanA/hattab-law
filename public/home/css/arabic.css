@@ -110,9 +110,8 @@ p{
     text-align: right;
 }
 .contact_us_6 .responsive-container-block.container{
-       margin-right: -147px;
-       align-items: center;
-       gap: 45px;
+    align-items: center;
+    gap: 45px;
 }
 
 .contact_us_6 *{
@@ -125,7 +124,7 @@ p{
 .contact_us_6 .submit-btn{
     text-align: center;
     width: 77%;
-    margin-left: 58px;
+    margin: auto;
 }
 
 .practice_area .single_practice .practice_hover p {
@@ -135,57 +134,50 @@ p{
 @media (max-width: 420px){
     .slider_area_inner .single_slider .slider_text h3{
         font-family: "Cairo", sans-serif !important;
-    font-weight: 100;
-}
-.boxed-btn4 {
-    font-family: "Cairo", sans-serif !important;
-    width: 166px;
-}
-.section_title span{
-    color: #c78c15;
-    display: block;
-}
-.about-us h2 {
-    font-size: 21px;
-    font-weight: 700;
-    color: #b89b5e;
-    border-bottom: 3px solid #b89b5e;
-    display: block; 
-    padding-bottom: 10px;
-    text-align: right; 
-    direction: rtl; 
-    white-space: normal; 
-    margin: 10px 0; 
-}
-.about-us p{
-    width: auto;
-}
-.about_area .single_about_info .about_text{
-    font-size: 22px;
-}
-.team-info h3.member-name{
-    text-align: center;
-}
-.team-info p.position{
-    text-align: center;
-}
-.contact_us_6 .responsive-container-block.container{
-    margin: 0;
-    width: 89%;
-}
-.contact_us_6 p {
-    margin-left: 198px;
-    margin-top: 19px;
-  }
-  .map-part .map-container{
-    width: 94%;
-    height: 163px;
-    margin-left: 32px;
-  }
-  .map-part .logo-img {
-    margin-left: 284px;
-    margin-top: -30px;
-}
+        font-weight: 100;
+    }
+    .boxed-btn4 {
+        font-family: "Cairo", sans-serif !important;
+        width: 166px;
+    }
+    .section_title span{
+        color: #c78c15;
+        display: block;
+    }
+    .about-us h2 {
+        font-size: 21px;
+        font-weight: 700;
+        color: #b89b5e;
+        border-bottom: 3px solid #b89b5e;
+        display: block; 
+        padding-bottom: 10px;
+        text-align: right; 
+        direction: rtl; 
+        white-space: normal; 
+        margin: 10px 0; 
+    }
+    .about-us p{
+        width: auto;
+    }
+    .about_area .single_about_info .about_text{
+        font-size: 22px;
+    }
+    .team-info h3.member-name{
+        text-align: center;
+    }
+    .team-info p.position{
+        text-align: center;
+    }
+    .contact_us_6 p {
+        margin-top: 19px;
+    }
+    .map-part .map-container{
+        width: 94%;
+        height: 163px;
+    }
+    .map-part .logo-img {
+        margin-top: -30px;
+    }
 }
 
 
@@ -230,20 +222,16 @@ p{
         text-align: center;
     }
     .contact_us_6 .responsive-container-block.container{
-        margin: 0;
         width: 89%;
     }
     .contact_us_6 p {
-        margin-left: 198px;
         margin-top: 19px;
     }
     .map-part .map-container{
         width: 94%;
         height: 163px;
-        margin-left: 32px;
     }
     .map-part .logo-img {
-        margin-left: 284px;
         margin-top: -30px;
     }
 }
@@ -287,21 +275,14 @@ p{
     .team-info p.position{
         text-align: center;
     }
-    .contact_us_6 .responsive-container-block.container{
-        margin: 0;
-        width: 89%;
-    }
     .contact_us_6 p {
-        margin-left: 198px;
         margin-top: 19px;
     }
     .map-part .map-container{
         width: 94%;
         height: 163px;
-        margin-left: 32px;
     }
     .map-part .logo-img {
-        margin-left: 284px;
         margin-top: -30px;
     }
 }
