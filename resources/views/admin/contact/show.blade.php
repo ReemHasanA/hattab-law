@@ -1,6 +1,11 @@
 @extends('layouts.dashboard') 
 
+@section('style')
+<link rel="stylesheet" href="{{asset('home/css/ourteam.css')}}">
+@endsection
+
 @section('body')
+<div class="form-container form-container-bottom" style="margin-top: 30px;">
     <h1>Message</h1>
         <table>
             <tr>
@@ -25,4 +30,5 @@
             </tr>
 
         </table>
+</div>
 @endsection

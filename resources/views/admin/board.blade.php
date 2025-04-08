@@ -1,25 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Al Hattab Law Firm</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    
+@extends('layouts.dashboard') 
 
-    <link rel="stylesheet" href="{{asset('home/css/board.css')}}">
-</head>
-<body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <img id="LawLogo" src="{{ asset('img/homePage/logo.png') }}" alt="Law Firm Logo">
-        <h2>Al Hattab Law Firm</h2>
-        <ul>
-            <li class="active"><a href="{{ route('admin.board') }}">Dashboard</a></li>
-            <li><a href="{{ route('practices.create') }}">Practices</a></li>
-            <li><a href="{{ route('team.create') }}">Our Team</a></li>
-        </ul>
-    </div>
+@section('style')
+<link rel="stylesheet" href="{{asset('home/css/board.css')}}">
+@endsection
+
+@section('body')
 
     <!-- Main Content -->
     <div class="main-content">
@@ -43,11 +28,4 @@
                 <p>View and edit team member details.</p>
             </a>
         </div>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2025 Thirty Six 36. All Rights Reserved.</p>
-        </footer>
-    </div>
-</body>
-</html>
+@endsection

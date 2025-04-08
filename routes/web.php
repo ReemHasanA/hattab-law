@@ -21,10 +21,11 @@ Route::middleware([SetLocale::class])->group(function () {
 });
 
 
+// Authentication Routes (Login)
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
 Route::post('/login', [AuthenticatedSessionController::class, 'store']);
+Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
-// Authentication Routes (Login)
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.board');
 

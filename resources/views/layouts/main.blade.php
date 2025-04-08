@@ -156,12 +156,6 @@
                             @foreach ($practices as $practice)
                             <li><a href="{{url('practices', $practice->id)}}">{{ $practice->name }}</a></li>
                             @endforeach
-                            {{-- <li>{{__("Tax and Customs services")}}</li>
-                            <li>{{__("Intellectual property")}}</li>
-                            <li>{{__("Family and Inheritance")}}</li>
-                            <li>{{__("Citizenship, Residency and Investment")}}</li>
-                            <li>{{__("Organization and Association")}}</li>
-                            <li>{{__("Specialized Legal Services")}}</li> --}}
                         </ul>
                     </div>
                 </div>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-    <link rel="stylesheet" href="{{asset('home/css/ourteam.css')}}">
+    @yield('style')
 </head>
 <body>
     <!-- Sidebar -->
@@ -17,12 +17,14 @@
             <li><a href="{{ route('admin.board') }}">Dashboard</a></li>
             <li><a href="{{ route('practices.create') }}">Practices</a></li>
             <li><a href="{{ route('team.create') }}">Our Team</a></li>
+            <li><a href="{{ route('contact.index') }}">Contact</a></li>
+            <li><a href="{{ route('logout') }}">Logout</a></li>
         </ul>
     </div>
 
-    <div class="form-container form-container-bottom" style="margin-top: 30px;">
+    <main>
         @yield('body')
-    </div>
+    </main>
 
 </body>
 </html>

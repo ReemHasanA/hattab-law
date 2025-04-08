@@ -1,28 +1,10 @@
+@extends('layouts.dashboard') 
 
+@section('style')
+<link rel="stylesheet" href="{{asset('home/css/ourteam.css')}}">
+@endsection
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teams | Edit</title>
-
-    <link rel="stylesheet" href="{{asset('home/css/ourteam.css')}}">
-
-   
-
-</head>
-<body>
-    <!-- Sidebar -->
-   <div class="sidebar">
-       <img id="LawLogo" src="{{ asset('img/homePage/logo.png') }}" alt="">
-       <h2>Al Hattab Law Firm</h2>
-       <ul>
-       <li><a href="{{ route('admin.board') }}">Dashboard</a></li>
-       <li><a href="{{ route('practices.create') }}">Practices</a></li>
-           <li><a href="{{ route('team.create') }}">Our Team</a></li>
-       </ul>
-   </div>
+@section('body')
 
    <div class="form-container">
     <h1>Edit Team Member</h1>
@@ -90,8 +72,5 @@
         <button type="submit" class="btn btn-success">Edit</button>
     </form>
 </div>
-    
-</body>
-</html>
 
-   
+@endsection

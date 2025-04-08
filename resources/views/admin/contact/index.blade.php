@@ -1,6 +1,11 @@
 @extends('layouts.dashboard') 
 
+@section('style')
+<link rel="stylesheet" href="{{asset('home/css/ourteam.css')}}">
+@endsection
+
 @section('body')
+<div class="form-container form-container-bottom" style="margin-top: 30px;">
     <h1>Message List</h1>
 
     @if($contacts->isEmpty())
@@ -46,6 +51,7 @@
     <div class="d-flex justify-content-center mt-3">
         {{ $contacts->links() }}
     </div>
+</div>
 @endsection
 
    
