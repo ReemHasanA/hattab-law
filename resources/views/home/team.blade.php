@@ -29,20 +29,20 @@
                 <div class="team-image">
                     <img 
                         src="{{ asset('images/team/' . $member->photo) }}" 
-                        alt="{{ $locale === 'en' ? $member->name_en : $member->name_ar }}"
+                        alt="{{ $member->name }}"
                         loading="lazy"
                     >
                 </div>
 
                 <div class="team-info">
                     <h3 class="member-name">
-                        {{ $locale === 'en' ? $member->name_en : $member->name_ar }}
+                        {{ $member->name }}
                     </h3>
                     <p class="position">
-                        {{ $locale === 'en' ? $member->position_en : $member->position_ar }}
+                        {{ $member->position }}
                     </p>
                     <p class="bio">
-                        {{ $locale === 'en' ? $member->bio_en : $member->bio_ar }}
+                        {{ $member->bio }}
                     </p>
                 </div>
             </div>

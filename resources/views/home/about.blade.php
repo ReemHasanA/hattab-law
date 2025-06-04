@@ -29,17 +29,17 @@
             <div class="container">
             <div class="row">
                 <div class="col-md-4 value-box">
-                    <i class="fas fa-eye"></i>
+                    <i class="fa fa-eye"></i>
                     <h4>{{__("Our Vision")}}</h4>
                     <p>{{__("To be the most trusted and innovative legal consultancy firm in Jordan and the region, recognized for delivering exceptional legal solutions that empower clients to navigate complex challenges with confidence and success.")}}</p>
                 </div>
                 <div class="col-md-4 value-box">
-                    <i class="fas fa-balance-scale"></i>
+                    <i class="fa fa-balance-scale"></i>
                     <h4>{{__("Our Mission")}}</h4>
                     <p>{{__("At Al Hattab Law Firm, we are committed to being a trusted strategic legal partner, meeting our clients' needs efficiently and professionally by providing comprehensive, high-quality legal services.")}}</p>
                 </div>
                 <div class="col-md-4 value-box">
-                    <i class="fas fa-handshake"></i>
+                    <i class="fa fa-handshake-o"></i>
                     <h4>{{__("Core Values")}}</h4>
                     <ul>
                         <li>✔ {{__("Integrity & Honesty")}}</li>

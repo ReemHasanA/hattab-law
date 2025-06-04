@@ -1,7 +1,7 @@
 @extends('layouts.main') 
 
 @section('style')
-<link rel="stylesheet" href="{{asset('home/css/contact.css')}}"><!doctype html>
+<link rel="stylesheet" href="{{asset('home/css/contact.css')}}">
 @endsection
 
 @section('body')
@@ -83,9 +83,9 @@
         
         <!-- Contact Info Section -->
         <div class="contact-info">
-          <p><i id="footer-i" class="fas fa-map-marker-alt"></i>{{__("Jordan - Amman - Hashim Khair Street - Building 79")}}</p>
-          <p><i id="footer-i" class="fas fa-phone-alt"></i> <a href="tel:+962795534658">{{__("00962-79-5534658")}}</a></p>
-          <p><i id="footer-i"  class="fas fa-envelope"></i> <a href="mailto:{{config('general.main_email')}}">{{config('general.main_email')}}</a></p>
+          <p><i id="footer-i" class="fa fa-map-marker"></i>{{__("Jordan - Amman - Hashim Khair Street - Building 79")}}</p>
+          <p><i id="footer-i" class="fa fa-phone"></i> <a href="tel:+962795534658">00962-79-5534658</a></p>
+          <p><i id="footer-i" class="fa fa-envelope"></i> <a href="mailto:{{config('general.main_email')}}">{{config('general.main_email')}}</a></p>
         </div>
 
       </div>
