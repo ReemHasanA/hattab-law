@@ -14,10 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->web(append: [\App\Http\Middleware\SetLocale::class,
         ]);
-
-        $middleware->alias([
-            'admin' => \App\Http\Middleware\AdminMiddleware::class,
-        ]);
+        $middleware->redirectUsersTo('/admin/dashboard'); // logined user will be redirected from login to admin dashboard 
     })
 
     ->withExceptions(function (Exceptions $exceptions) {

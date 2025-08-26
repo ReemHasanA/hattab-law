@@ -22,11 +22,13 @@ Route::middleware([SetLocale::class])->group(function () {
 
 
 // Authentication Routes (Login)
-Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
-Route::post('/login', [AuthenticatedSessionController::class, 'store']);
-Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
+    Route::post('/login', [AuthenticatedSessionController::class, 'store']);
+});
+Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout')->middleware(['auth']);
 
-Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.board');
 
     Route::get('/practices/create', [PracticeController::class, 'create'])->name('practices.create');
@@ -63,9 +65,6 @@ Route::get('/lang/{locale}', function ($locale) {
     return redirect()->back();
 })->name('switchLang');
 
-Route::get('/admin/board', function () {
-    return view('admin.board');
-})->name('admin.board');
 
 
 
